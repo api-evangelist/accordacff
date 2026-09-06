@@ -64,5 +64,27 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-Accordacff is a company surfaced via the API Evangelist harvest backlog (source: secondary-market) and added to the network as a stub for full-pipeline profiling.
-- https://equityzen.com/company/accordacff
+## Accord
+
+Accord (inaccord.com) is a San Francisco-based revenue excellence platform for B2B sales, onboarding and customer
+success teams, founded in 2020 by Ross Rich and Ryan Rich. It turns a company's winning sales process into
+enforceable playbooks, mutual action plans and shared buyer workspaces called Accords.
+
+This repository was created from a secondary-market harvest row whose slug (`accordacff`) came from the marketplace
+listing, not from the company. The `aid` is left unchanged because it is the published page slug; the company's real
+name is Accord.
+
+**Public API surface profiled here**
+
+- **Accord Developer API** — one GraphQL endpoint at `https://api2.inaccord.com/graphql`, documented at
+  <https://developers.inaccord.com/>. The public reference carries 461 queries, 579 mutations and 3 subscriptions
+  over 692 object types. Bearer API key, workspace-scoped, row-level security. Beta; Enterprise tier.
+- **Accord MCP Server** — hosted remote MCP endpoint at `https://api.inaccord.com/1/mcp/mcp`, OAuth 2.1 + PKCE with
+  dynamic client registration and `mcp:read` / `mcp:write` scopes. Beta, read-only.
+
+Accord publishes no OpenAPI, no downloadable GraphQL SDL, no SDKs, no CLI, no webhooks catalog, no status page and
+no security.txt. Its live GraphQL introspection and MCP `tools/list` are both authenticated, so the schema and the
+tool list are not readable anonymously; what is recorded here is what Accord itself publishes.
+
+- Company site: <https://inaccord.com/>
+- Secondary-market listing this record was harvested from: <https://equityzen.com/company/accordacff>

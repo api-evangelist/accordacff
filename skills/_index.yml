@@ -1,0 +1,39 @@
+generated: '2026-09-06'
+method: generated
+source: >-
+  https://developers.inaccord.com/quickstarts/accords, https://developers.inaccord.com/reference,
+  https://developers.inaccord.com/errors, https://developers.inaccord.com/filtering-and-conditions
+name: Accord agent skills
+api: Accord Developer API (GraphQL)
+endpoint: https://api2.inaccord.com/graphql
+note: >-
+  Packaged operating instructions for the two marquee flows of the Accord GraphQL API. Accord publishes no
+  skills/, AGENTS.md or llms.txt of its own — these are authored by API Evangelist. Every operation named in them
+  was verified present in Accord's own published reference (developers.inaccord.com/reference/operations/*) before
+  being written down; the read skill's query is Accord's own published quickstart document verbatim. Nothing is
+  invented: where Accord documents no mechanism — idempotency, dry run, a recovery window — the skill says so
+  explicitly rather than filling the gap.
+skill_count: 2
+skills:
+  - name: accordacff-load-accord
+    file: accordacff-load-accord.md
+    description: >-
+      Read path — hydrate one Accord with its stages, steps, members, resources and summaries; page collections
+      with Relay cursors; filter and order server-side; read the GraphQL error envelope.
+    operations: [accord, accords, accordsConnection, stages, steps, accordMembers, resources, summaries]
+  - name: accordacff-build-accord
+    file: accordacff-build-accord.md
+    description: >-
+      Write path — create an Accord and populate it with stages, steps, contacts, members and resources, plus
+      the retry discipline the missing idempotency mechanism forces on a caller and the recover* undo path.
+    operations:
+      - createAccord
+      - autoCreateAccord
+      - createStage
+      - createStep
+      - createAccordMember
+      - createAccordContact
+      - createResource
+      - updateAccord
+      - deleteAccord
+      - recoverAccord

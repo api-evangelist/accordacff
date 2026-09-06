@@ -1,0 +1,78 @@
+generated: '2026-09-06'
+method: searched
+source: https://developers.inaccord.com/errors
+docs: https://developers.inaccord.com/errors
+name: Accord error catalog
+format: graphql-errors
+rfc9457: false
+note: >-
+  Accord's API is GraphQL, so it does not use RFC 9457 problem+json. Errors arrive in the standard GraphQL errors[]
+  array with HTTP 200, and the stable machine-readable code lives in extensions.code. Every code Accord documents is
+  a PostgreSQL SQLSTATE value, consistent with the PostGraphile-backed schema (Accord's public GitHub org forks
+  graphile/postgraphile). Codes and meanings below are quoted from Accord's own error page; nothing is inferred.
+envelope:
+  transport_status: 200
+  shape: |
+    {
+      "data": null,
+      "errors": [{
+        "message": "permission denied for relation accord",
+        "locations": [{ "line": 2, "column": 3 }],
+        "path": ["accords"],
+        "extensions": {
+          "code": "42501",
+          "severity": "ERROR"
+        }
+      }]
+    }
+  fields:
+    - name: message
+      description: 'Human-readable description. Accord: "Don''t pattern-match on this — it can change."'
+    - name: path
+      description: Response path at which the error occurred
+    - name: locations
+      description: Query position the error originated from
+    - name: extensions.code
+      description: 'Stable, machine-readable code (PostgreSQL SQLSTATE)'
+    - name: extensions.severity
+      description: ERROR, WARNING, etc.
+  partial_success: >-
+    Accord: "Always check both" data and errors — a GraphQL response can carry data and errors together.
+error_count: 6
+errors:
+  - code: '42501'
+    title: Permission denied
+    cause: The key's role lacks visibility or modification rights on the relation
+    remediation: Use a key whose workspace and row-level-security role can see or change the row
+  - code: '23505'
+    title: Unique violation
+    cause: A duplicate value already exists for a unique constraint
+    remediation: Look the existing row up first, or use the matching upsert mutation
+  - code: '23503'
+    title: Foreign-key violation
+    cause: A referenced row is missing or has been deleted
+    remediation: Confirm the referenced id still exists before writing
+  - code: '23502'
+    title: Not-null violation
+    cause: A required column was absent from the input
+    remediation: Supply every required field on the input type
+  - code: 22P02
+    title: Invalid input syntax
+    cause: Malformed UUID, enum, or date
+    remediation: Validate identifier and enum formats against the published input types
+  - code: P0001
+    title: Application error
+    cause: A server-side business rule rejected the operation
+    remediation: Read the message; these are deterministic and should not be blindly retried
+http_status_codes:
+  - status: 400
+    meaning: Malformed request or missing query
+  - status: 401
+    meaning: Missing or invalid API key
+  - status: 403
+    meaning: Unauthorized API key
+  - status: 5xx
+    meaning: 'Server error; retry with backoff'
+retry_guidance: >-
+  Accord: "Retry on transient HTTP errors (5xx) with exponential backoff. Don't retry blindly on GraphQL errors —
+  most are deterministic."

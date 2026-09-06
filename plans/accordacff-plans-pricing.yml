@@ -1,0 +1,78 @@
+generated: '2026-09-06'
+method: searched
+source: https://inaccord.com/pricing
+name: Accord plans and pricing
+currency: USD
+billing_period: per user / month, plus a platform fee
+public_pricing: partial
+plan_count: 3
+note: >-
+  Accord publishes per-seat list prices for two of its three tiers and routes all three to "Talk to Sales" for the
+  platform fee. API access is not part of the published price of the self-service tiers: the pricing table lists
+  "API Support" only under Enterprise, which is custom-priced. The Growth tier lists "Model Context Protocol" as an
+  included feature, while Accord's own MCP documentation says the server is "available to all workspaces with API
+  access" — the two statements are recorded as published, and not reconciled here.
+plans:
+  - name: Starter
+    price: 99
+    currency: USD
+    period: per user per month
+    plus: platform fee (not published)
+    api_access: false
+    mcp_access: false
+    included:
+      - Playbooks
+      - Execution Scoring
+      - CRM Integration
+      - Stakeholder Management
+      - Mutual Action Plans
+      - Reporting
+      - Content Management
+      - Sandbox Account
+      - Positioning Enforcement
+      - Methodology Enforcement
+      - Salesforce Integration
+      - HubSpot Integration
+      - Other Integrations
+      - 2 onboarding sessions
+    quota: not published
+    overage: not published
+  - name: Growth
+    price: 119
+    currency: USD
+    period: per user per month
+    plus: platform fee (not published)
+    api_access: false
+    mcp_access: true
+    marketing_label: Most Popular
+    included:
+      - Everything in Starter
+      - Deal Reviews
+      - Gong Integration
+      - Accord Intelligence
+      - Stakeholder Recommendations
+      - Model Context Protocol
+      - 10 hours onboarding and 1 playbook build
+    quota: not published
+    overage: not published
+  - name: Enterprise
+    price: null
+    price_label: Custom
+    currency: USD
+    period: per user per month
+    plus: platform fee (not published)
+    api_access: true
+    mcp_access: true
+    included:
+      - Everything in Growth
+      - Single Sign-on
+      - API Support
+      - Read and Write Access to Opportunities, Accounts and Custom Objects
+      - 1:1 training and 3 playbook builds
+    quota: not published
+    overage: not published
+free_tier: false
+free_trial: not published
+self_serve_signup: false
+signup_path: https://inaccord.com/book-demo
+checked: '2026-09-06'

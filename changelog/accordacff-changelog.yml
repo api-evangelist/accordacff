@@ -1,0 +1,16 @@
+generated: '2026-09-06'
+method: searched
+source: https://developers.inaccord.com/changelog
+name: Accord Developer API changelog
+url: https://developers.inaccord.com/changelog
+http_status: 200
+scheme: undated prose page (no version numbers, no dates)
+current_version: null
+entry_count: 0
+entries: []
+note: >-
+  Accord ships a changelog page in its developer docs, scoped to "notable additions, removals, and behavioral
+  changes" to the GraphQL API, but it published nothing as of 2026-09-06 — the page body reads "No entries yet."
+  Recorded as an honest zero. No ChangeLog pointer is wired into apis.yml, because a scaffolded page with no entries
+  is not a changelog a consumer can read; re-check on the next pass.
+checked: '2026-09-06'

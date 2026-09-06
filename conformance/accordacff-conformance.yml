@@ -1,0 +1,99 @@
+generated: '2026-09-06'
+method: probed
+source: https://api.inaccord.com/.well-known/oauth-authorization-server
+name: Accord conformance
+note: >-
+  Standards Accord's own surface demonstrably conforms to, each with the exact evidence location. Claims that could
+  only be inferred are recorded with conforms:false rather than left out, so the gaps are legible. Accord's REST/OpenAPI
+  row is deliberately false: Accord publishes no OpenAPI at all — its only contract is GraphQL.
+conformance:
+  - id: oauth2
+    name: OAuth 2.0 / 2.1 authorization framework
+    conforms: true
+    evidence: https://api.inaccord.com/.well-known/oauth-authorization-server
+    detail: >-
+      Authorization-code grant with refresh tokens, public clients (token_endpoint_auth_methods_supported ["none"]).
+      Accord describes the MCP server as using "OAuth 2.1 with PKCE".
+  - id: rfc8414
+    name: OAuth 2.0 Authorization Server Metadata
+    conforms: true
+    evidence: https://api.inaccord.com/.well-known/oauth-authorization-server
+    detail: HTTP 200, valid JSON, carries issuer, authorization_endpoint, token_endpoint, registration_endpoint.
+  - id: rfc9728
+    name: OAuth 2.0 Protected Resource Metadata
+    conforms: true
+    evidence: https://api.inaccord.com/.well-known/oauth-protected-resource
+    detail: >-
+      HTTP 200, names resource https://api.inaccord.com/1/mcp/mcp, authorization_servers, bearer_methods_supported
+      ["header"] and scopes_supported [mcp:read, mcp:write].
+  - id: rfc7636
+    name: PKCE
+    conforms: true
+    evidence: https://api.inaccord.com/.well-known/oauth-authorization-server
+    detail: code_challenge_methods_supported ["S256"].
+  - id: rfc7591
+    name: OAuth 2.0 Dynamic Client Registration
+    conforms: true
+    evidence: https://api.inaccord.com/.well-known/oauth-authorization-server
+    detail: registration_endpoint https://api.inaccord.com/1/mcp/register is advertised.
+  - id: mcp
+    name: Model Context Protocol
+    conforms: true
+    evidence: https://collaboration.inaccord.com/knowledge/accord-mcp-server-setup-and-usage
+    detail: >-
+      Hosted remote server, streamable-HTTP transport, published client config {"type":"http","url":
+      "https://api.inaccord.com/1/mcp/mcp"}. An anonymous tools/list POST returned 401 with a bearer-token
+      challenge — a protocol-correct response for an OAuth-protected MCP endpoint.
+  - id: graphql
+    name: GraphQL (June 2018 / October 2021 spec)
+    conforms: true
+    evidence: https://developers.inaccord.com/reference
+    detail: >-
+      Single endpoint, queries/mutations/subscriptions, standard errors[] envelope with message/locations/path/extensions.
+  - id: relay-cursor-connections
+    name: GraphQL Cursor Connections Specification (Relay)
+    conforms: true
+    evidence: https://developers.inaccord.com/filtering-and-conditions
+    detail: >-
+      first/after/last/before with edges { cursor node } and pageInfo { hasNextPage endCursor }; every collection also
+      exposes a *Connection field, and node ids are exposed via *ByNodeId lookups.
+  - id: oidc
+    name: OpenID Connect
+    conforms: false
+    evidence: https://api.inaccord.com/.well-known/openid-configuration
+    detail: >-
+      404. Accord's authorization server publishes RFC 8414 metadata but no OIDC discovery document and no id_token
+      support; end-user identity in the MCP flow is delegated to Google SSO inside Accord's own authorize page.
+  - id: rfc9457
+    name: 'RFC 9457 Problem Details for HTTP APIs'
+    conforms: false
+    evidence: https://developers.inaccord.com/errors
+    detail: Not applicable in practice — errors are carried in the GraphQL errors[] array at HTTP 200, not problem+json.
+  - id: openapi
+    name: OpenAPI
+    conforms: false
+    evidence: https://api2.inaccord.com/openapi.json
+    detail: >-
+      404. Probed /openapi.json, /openapi.yaml, /swagger.json, /api-docs, /docs and /redoc on api2.inaccord.com,
+      api.inaccord.com and developers.inaccord.com — every one 404. Accord ships no REST surface to describe.
+  - id: rfc9116
+    name: 'RFC 9116 security.txt'
+    conforms: false
+    evidence: https://inaccord.com/.well-known/security.txt
+    detail: 404 on every Accord host probed.
+  - id: rate-limit-headers
+    name: 'IETF RateLimit header fields'
+    conforms: false
+    evidence: https://developers.inaccord.com/errors
+    detail: No RateLimit-* or X-RateLimit-* headers documented, and no 429 in the published status table.
+domain_standard:
+  market: B2B sales execution / revenue operations
+  standard_declared: none
+  detail: >-
+    Reward-only check, and there is nothing to reward here. The revenue-operations market has no widely adopted
+    machine-readable interchange standard of the kind this check looks for, and Accord's contract declares none —
+    no SCIM schema URNs, no OData $metadata, no ActivityPub/LTI/OneRoster/HL7/X12/ISO-20022 shapes anywhere in the
+    published reference. Its CRM interoperability is delivered through bespoke Salesforce, HubSpot, Gong and Zapier
+    connectors and a crmObject/crmObjectSync object family in its own schema, not through a shared standard. No
+    conformance is asserted; the absence is not a deduction.
+checked: '2026-09-06'

@@ -1,0 +1,129 @@
+generated: '2026-09-06'
+method: probed
+source: direct HTTPS probe of each host known to this record (registrable domain + www, every apis[].baseURL host, the docs host, the help-centre host, and the authorization_servers host named in the protected-resource document)
+name: Accord — /.well-known/ probe
+note: >-
+  Two real documents are served, both on api.inaccord.com, and both describe the Accord MCP server's OAuth 2.1
+  authorization surface: an RFC 9728 protected-resource document naming the MCP endpoint as the resource, and an
+  RFC 8414 authorization-server document advertising PKCE (S256), dynamic client registration and the mcp:read /
+  mcp:write scopes. Every other path on every other host returned 404. inaccord.com and www.inaccord.com return a
+  Webflow 404, developers.inaccord.com a Docusaurus 404 shell and collaboration.inaccord.com a help-centre 404 shell;
+  those are recorded as misses, not as documents. app.inaccord.com does not resolve (connection failure, recorded 0).
+hosts:
+  - host: api.inaccord.com
+    documents:
+      - path: /.well-known/oauth-protected-resource
+        status: 200
+        file: accordacff-oauth-protected-resource.json
+      - path: /.well-known/oauth-authorization-server
+        status: 200
+        file: accordacff-oauth-authorization-server.json
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: inaccord.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: www.inaccord.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+  - host: developers.inaccord.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: api2.inaccord.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/oauth-authorization-server
+        status: 404
+      - path: /.well-known/oauth-protected-resource
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/ai-plugin.json
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: collaboration.inaccord.com
+    documents:
+      - path: /.well-known/security.txt
+        status: 404
+      - path: /.well-known/openid-configuration
+        status: 404
+      - path: /.well-known/api-catalog
+        status: 404
+      - path: /.well-known/agent-card.json
+        status: 404
+      - path: /.well-known/agent.json
+        status: 404
+      - path: /llms.txt
+        status: 404
+  - host: app.inaccord.com
+    documents:
+      - path: /.well-known/agent-card.json
+        status: 0
+      - path: /.well-known/security.txt
+        status: 0
+checked: '2026-09-06'

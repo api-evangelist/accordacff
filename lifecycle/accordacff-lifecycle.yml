@@ -1,0 +1,55 @@
+generated: '2026-09-06'
+method: searched
+source: https://developers.inaccord.com/
+name: Accord API lifecycle
+maturity: beta
+maturity_statement: >-
+  "Accord's API Platform is currently in Beta and requires an active Accord license that includes API access."
+  Accord's MCP server is separately described as "now in beta and available to all workspaces with API access today"
+  and as read-only, with writes planned.
+versioning:
+  scheme: unversioned
+  detail: >-
+    Single GraphQL endpoint at https://api2.inaccord.com/graphql with no version segment, no version header and no
+    published version identifier. The MCP endpoint carries a /1/ path segment (https://api.inaccord.com/1/mcp/mcp)
+    but Accord documents no versioning policy for it.
+changelog:
+  url: https://developers.inaccord.com/changelog
+  http_status: 200
+  entry_count: 0
+  detail: >-
+    Accord publishes a changelog page scoped to "notable additions, removals, and behavioral changes" to the GraphQL
+    API. As of 2026-09-06 it contains the text "No entries yet." Because the page carries no dated entries, no
+    ChangeLog pointer is emitted in apis.yml — the surface exists but has published nothing to read.
+  see: changelog/accordacff-changelog.yml
+deprecation_policy:
+  published: false
+  sunset_header: not documented
+  deprecation_header: not documented
+  rfc8594: false
+  detail: >-
+    No deprecation or sunset policy is published on the developer site or the marketing site, and no deprecated
+    operations could be identified — Accord publishes no SDL and its introspection endpoint is authenticated, so the
+    @deprecated directive markers in the schema are not readable anonymously.
+  deprecated_operations: unknown (schema not readable anonymously)
+status_page:
+  published: false
+  probed:
+    - url: https://status.inaccord.com
+      status: 0
+      note: host does not resolve
+    - url: https://inaccord.statuspage.io
+      status: 200
+      note: >-
+        NOT a status page — redirects to Atlassian's Statuspage marketing site
+        (title "Real-Time Incident Communication with Statuspage | Atlassian"). Recorded as a miss.
+  detail: >-
+    No status or uptime page was found on any Accord host or on the common third-party status providers, so no
+    StatusPage pointer is emitted.
+sla:
+  published: false
+  detail: No public SLA or uptime commitment was found; Accord's pricing routes every tier to "Talk to Sales".
+support:
+  help_centre: https://collaboration.inaccord.com/knowledge
+  developer_contact: not published separately
+checked: '2026-09-06'

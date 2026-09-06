@@ -1,0 +1,168 @@
+generated: '2026-09-06'
+method: searched
+source: https://developers.inaccord.com/filtering-and-conditions
+docs:
+  - https://developers.inaccord.com/filtering-and-conditions
+  - https://developers.inaccord.com/authentication
+  - https://developers.inaccord.com/errors
+name: Accord API conventions
+note: >-
+  Cross-cutting runtime semantics for the Accord Developer API. Accord ships one GraphQL endpoint, no REST and no
+  OpenAPI, so REST-shaped conventions (path versioning, sparse fieldsets, HTTP caching) do not apply — GraphQL field
+  selection is the expansion mechanism. Everything below is quoted or directly summarised from Accord's own docs;
+  where Accord documents nothing, the field says so rather than guessing.
+transport:
+  protocol: GraphQL over HTTPS
+  endpoint: https://api2.inaccord.com/graphql
+  method: POST
+  content_type: application/json
+  backend: >-
+    PostGraphile over PostgreSQL — evidenced by SQLSTATE error codes, Relay connection shape, condition/filter/orderBy
+    argument grammar, and Accord's public GitHub org (github.com/inaccord) forking graphile/postgraphile.
+authentication:
+  style: bearer API key
+  header: 'Authorization: Bearer YOUR_API_KEY'
+  scoping: workspace-scoped; row-level security identical to in-app sessions
+  see: authentication/accordacff-authentication.yml
+pagination:
+  style: relay-cursor-connections
+  parameters:
+    - name: first
+      type: Int
+      description: Take the first N results
+    - name: after
+      type: Cursor
+      description: Start the page after the given cursor
+    - name: last
+      type: Int
+      description: Take the last N results
+    - name: before
+      type: Cursor
+      description: End the page before the given cursor
+    - name: offset
+      type: Int
+      description: Skip the first N results
+  response_fields:
+    - edges
+    - edges.cursor
+    - edges.node
+    - pageInfo.hasNextPage
+    - pageInfo.endCursor
+    - totalCount
+  max_page_size: not documented
+  guidance: >-
+    Accord recommends "narrower filters and reasonable page sizes (first: 25–100)" rather than filtering client-side.
+  connection_fields: >-
+    Every collection is published twice in the reference — a plain list field (e.g. accords) and a Relay connection
+    field (e.g. accordsConnection).
+filtering:
+  condition:
+    description: >-
+      "exact-match object whose fields are the columns you want to constrain. Every field is AND-ed together"
+  filter:
+    operators:
+      all_scalars: [equalTo, notEqualTo, in, notIn, isNull]
+      strings: [like, notLike, likeInsensitive, includes, startsWith, endsWith]
+      ordered: [greaterThan, greaterThanOrEqualTo, lessThan, lessThanOrEqualTo]
+      lists: [contains, containedBy, overlaps]
+    logical: [and, or, not]
+ordering:
+  parameter: orderBy
+  description: >-
+    Collection-specific enums with _ASC and _DESC variants; accepts an array for multi-key sorting
+    (e.g. PRIMARY_KEY_ASC).
+field_expansion:
+  mechanism: GraphQL selection sets — the caller names exactly the fields and nested relations it wants
+  sparse_fieldsets: n/a (native to GraphQL)
+versioning:
+  scheme: unversioned single endpoint
+  detail: >-
+    No version segment in the URL, no version header documented, no deprecation policy published. Accord maintains a
+    changelog page at developers.inaccord.com/changelog for "notable additions, removals, and behavioral changes",
+    but as of 2026-09-06 it reads "No entries yet."
+  see: lifecycle/accordacff-lifecycle.yml
+errors:
+  envelope: GraphQL errors[] at HTTP 200; stable code in extensions.code (PostgreSQL SQLSTATE)
+  see: errors/accordacff-error-codes.yml
+request_tracing:
+  request_id_header: not documented
+  correlation: not documented
+rate_limit_signaling:
+  documented: false
+  headers: none published
+  see: rate-limits/accordacff-rate-limits.yml
+idempotency:
+  coverage: none
+  mechanism: none
+  header: null
+  detail: >-
+    Accord documents no replay-protection mechanism. There is no Idempotency-Key header, no client-supplied request
+    id, and no statement about safe retries of mutations anywhere in the developer documentation; the error page's
+    only retry guidance is "Retry on transient HTTP errors (5xx) with exponential backoff. Don't retry blindly on
+    GraphQL errors — most are deterministic," which tells a caller when to retry, not how a duplicate write is
+    absorbed. A caller that retries a create* mutation after a timeout has no documented guarantee against a
+    duplicate row.
+  related_observation: >-
+    The reference publishes 52 upsert* mutations alongside 81 create* mutations. An upsert keyed on a natural key is
+    idempotent in effect for those specific resources, but Accord does not document it as a replay-protection
+    mechanism and it does not cover the create/update/delete surface, so it is recorded here as an observation and
+    NOT counted as idempotency coverage.
+  evidence:
+    - url: https://developers.inaccord.com/errors
+      http_status: 200
+    - url: https://developers.inaccord.com/authentication
+      http_status: 200
+reversibility:
+  grade: documented
+  applies: true
+  detail: >-
+    Accord's write surface is reversible by design at the data layer: the reference publishes 25 recover* mutations
+    that pair with the corresponding delete* mutations (soft delete then recover), plus revertLibraryResourceVersion
+    and restoreDefaultSubscriptions, and core objects expose an archivedAt timestamp (visible in the published
+    quickstart selection set for Accord). What Accord does NOT publish anywhere is a WINDOW — no retention period,
+    no "recover within N days" statement, and no documentation page for the recover* family at all beyond the
+    auto-generated reference stubs. An agent can therefore see that an undo path exists but cannot know how long it
+    stays open, so this grades as documented, not verified.
+  window: not documented
+  reversal_operations:
+    - reverses: deleteAccord
+      operation: recoverAccord
+      doc: https://developers.inaccord.com/reference/operations/mutations/recover-accord
+    - reverses: deleteAccordMember
+      operation: recoverAccordMember
+      doc: https://developers.inaccord.com/reference/operations/mutations/recover-accord-member
+    - reverses: deleteAccordDomain
+      operation: recoverAccordDomain
+      doc: https://developers.inaccord.com/reference/operations/mutations/recover-accord-domain
+    - reverses: deleteAccount
+      operation: recoverAccount
+      doc: https://developers.inaccord.com/reference/operations/mutations/recover-account
+    - reverses: deleteWorkspaceAccount
+      operation: recoverWorkspaceAccount
+      doc: https://developers.inaccord.com/reference/operations/mutations/recover-workspace-account
+    - reverses: deleteComment
+      operation: recoverComment
+      doc: https://developers.inaccord.com/reference/operations/mutations/recover-comment
+    - reverses: deleteCustomView
+      operation: recoverCustomView
+      doc: https://developers.inaccord.com/reference/operations/mutations/recover-custom-view
+    - reverses: deleteResource
+      operation: recoverResource
+      doc: https://developers.inaccord.com/reference/operations/mutations/recover-resource
+    - reverses: deleteStage
+      operation: recoverStage
+      doc: https://developers.inaccord.com/reference/operations/mutations/recover-stage
+    - reverses: deleteStep
+      operation: recoverStep
+      doc: https://developers.inaccord.com/reference/operations/mutations/recover-step
+    - reverses: deleteExecutiveSummary
+      operation: recoverExecutiveSummary
+      doc: https://developers.inaccord.com/reference/operations/mutations/recover-executive-summary
+    - reverses: deleteMeeting
+      operation: recoverMeeting
+      doc: https://developers.inaccord.com/reference/operations/mutations/recover-meeting
+  recover_operation_count: 25
+  full_list: graphql/accordacff-graphql-operations.yml
+dry_run_mode:
+  supported: false
+  detail: No dry-run, preview or validate-only argument is documented on any mutation.

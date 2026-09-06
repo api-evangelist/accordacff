@@ -1,0 +1,173 @@
+generated: '2026-09-06'
+method: derived
+source: >-
+  graphql/accordacff-graphql-operations.yml plus the verbatim selection sets published at
+  https://developers.inaccord.com/quickstarts/accords and https://developers.inaccord.com/quickstarts/workspace-accounts
+name: Accord data model
+note: >-
+  Accord publishes no SDL and its introspection endpoint is authenticated, so this graph is NOT a transcription of
+  the schema. Every entity below is named by an operation that exists in Accord's public reference, and every
+  relationship is one that appears literally as a nested selection in Accord's own published quickstart queries or
+  is named by a *By<Parent>IdAnd<Field> lookup query in the reference. Cardinality is read from whether the published
+  field is singular or plural. The full schema has 692 object types; this records the core spine only, and does not
+  claim to be complete. Nothing here is inferred from a field that was not observed.
+identifiers:
+  style: prefixed opaque string ids
+  example: 'ac_01H…  (Accord id, from the published quickstart variables block)'
+  node_ids: >-
+    Every entity also exposes a Relay global node id, evidenced by the *ByNodeId query and mutation pairs published
+    for each type.
+soft_delete:
+  field: archivedAt
+  observed_on: Accord (published quickstart selection set)
+  reversal: recover* mutations — see conventions/accordacff-conventions.yml
+entities:
+  - name: Accord
+    description: The shared buyer/seller workspace — the platform's central object. A deal or onboarding plan.
+    queries: [accord, accords, accordsConnection, accordByNodeId]
+    fields_observed:
+      - id
+      - workspaceId
+      - accountName
+      - accountGlyphUrl
+      - opportunityName
+      - opportunityAmount
+      - closeDate
+      - isDraft
+      - isTemplate
+      - archivedAt
+      - createdAt
+      - updatedAt
+    relationships:
+      - has_many: Stage
+        via: stages
+      - has_many: AccordMember
+        via: accordMembers
+      - has_many: Resource
+        via: resources
+      - has_many: Summary
+        via: summaries
+      - has_many: AccordDomain
+        via: accordDomains
+      - has_many: AccordContact
+        via: accordContacts (query accordContactByAccordIdAndEmail)
+      - has_many: AccordHealth
+        via: accordHealth (query accordHealthByAccordIdAndType)
+      - has_many: AccordCalendarEvent
+        via: accordCalendarEvents
+  - name: Stage
+    description: An ordered phase of an Accord.
+    queries: [stage, stages, stagesConnection]
+    fields_observed: [id, title, order, description]
+    relationships:
+      - belongs_to: Accord
+      - has_many: Step
+        via: steps
+  - name: Step
+    description: >-
+      An ordered action inside a Stage; may be internal-only — the published quickstart filters buyer-visible steps
+      with condition { internal: false }.
+    queries: [step, steps, stepsConnection]
+    fields_observed: [id, title, order, internal]
+    relationships:
+      - belongs_to: Stage
+      - has_many: StepResource
+        via: stepResources
+  - name: AccordMember
+    description: A person's membership of an Accord — internal seller or external buyer stakeholder.
+    queries: [accordMember, accordMembers, accordMembersConnection]
+    fields_observed:
+      - id
+      - designation
+      - invitationStatus
+      - internal
+      - contactRole
+      - shouldReceiveNotifications
+    relationships:
+      - belongs_to: Accord
+      - has_one: WorkspaceAccount
+        via: workspaceAccount
+  - name: WorkspaceAccount
+    description: A person's identity inside one workspace.
+    queries: [workspaceAccount, workspaceAccounts, workspaceAccountsConnection]
+    fields_observed: [id, contactEmail, role]
+    relationships:
+      - has_one: Profile
+        via: profile
+      - has_one: Account
+        via: account
+      - belongs_to: Workspace
+  - name: Account
+    description: The global person record behind a WorkspaceAccount.
+    queries: [account, accounts, accountByEmail]
+    fields_observed: [id, email]
+  - name: Profile
+    description: Display identity for a person.
+    fields_observed:
+      - firstName
+      - lastName
+      - preferredFirstName
+      - preferredLastName
+      - picture
+      - preferredPicture
+      - jobTitle
+    relationships:
+      - belongs_to: WorkspaceAccount
+  - name: Workspace
+    description: The tenant. API keys, playbooks, teams, preferences and every Accord hang off it.
+    queries: [workspace, workspaces, workspacesConnection]
+    relationships:
+      - has_many: WorkspaceAccount
+      - has_many: Accord
+      - has_many: ApiKey
+      - has_many: WorkspacePreference
+  - name: Resource
+    description: Content shared into an Accord; library resources are versioned (revertLibraryResourceVersion).
+    queries: [resource, resources, resourcesConnection]
+    fields_observed: [id, name]
+    relationships:
+      - belongs_to: Accord
+      - has_many: StepResource
+  - name: Summary
+    description: Executive summary attached to an Accord, composed of sections.
+    queries: [summary, summaries, executiveSummary, executiveSummarySection]
+    relationships:
+      - belongs_to: Accord
+      - has_many: ExecutiveSummarySection
+  - name: AccordDomain
+    description: Email domain associated with an Accord, used to scope buyer access.
+    queries: [accordDomain, accordDomains, accordDomainByAccordIdAndDomain]
+    fields_observed: [id, domain]
+    relationships:
+      - belongs_to: Accord
+  - name: AccordHealth
+    description: Scored health signal per Accord, keyed by type.
+    queries: [accordHealth, accordHealthByAccordIdAndType]
+    relationships:
+      - belongs_to: Accord
+  - name: CrmObject
+    description: A mirrored CRM record (Salesforce / HubSpot) and its sync state history.
+    queries: [crmObject, crmObjects, crmObjectSync, crmObjectSyncState, crmObjectSyncStateHistory]
+    relationships:
+      - has_one: CrmObjectSync
+      - has_many: CrmObjectSyncStateHistory
+  - name: DealCriteria
+    description: Qualification criteria associated to an Accord, with manager scoring.
+    queries: [dealCriteria, dealCriteriaAssociation, dealCriteriaAssociationManagerScore]
+    relationships:
+      - belongs_to: Accord
+  - name: ApiKey
+    description: A workspace-scoped API credential.
+    mutations: [createApiKey, deleteApiKey]
+    relationships:
+      - belongs_to: Workspace
+  - name: CustomView
+    description: A saved view, shareable to teams or individual workspace accounts.
+    queries: [customView, customViews, customViewTeam, customViewWorkspaceAccount]
+  - name: Comment
+    description: Threaded comment with reactions, attachable across objects.
+    queries: [comment, comments, commentReaction, customReaction]
+entity_count_recorded: 17
+total_object_types_in_schema: 692
+render: null
+checked: '2026-09-06'

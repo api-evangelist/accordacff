@@ -1,23 +1,187 @@
 aid: accordacff
-name: Accordacff
-description: 'Accordacff is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+name: Accord
+description: >-
+  Accord is a San Francisco-based revenue excellence platform for B2B sales, onboarding and customer success teams,
+  founded in 2020 by Ross Rich and Ryan Rich. It turns a company's winning sales process into enforceable playbooks,
+  mutual action plans and shared buyer workspaces, with stakeholder mapping, deal reviews, execution scoring and
+  bi-directional CRM sync. Its developer surface is a single GraphQL endpoint at api2.inaccord.com/graphql covering
+  20+ objects (Accords, Stages, Steps, Contacts, Members, Resources, Summaries, Engagements) behind a workspace-scoped
+  bearer API key, plus a hosted, OAuth 2.1 + PKCE Model Context Protocol server at api.inaccord.com that exposes the
+  same read surface to MCP clients such as Claude, Cursor and ChatGPT.
+image: https://cdn.prod.website-files.com/68d3df3714cf3a122c1640dd/6916517cbf54f093700a336d_Home%20Page_OG-min.png
 url: https://raw.githubusercontent.com/api-evangelist/accordacff/refs/heads/main/apis.yml
 x-type: company
 x-source: harvest:secondary-market
-x-tier: stub
-x-tier-reason: harvest
 specificationVersion: '0.20'
 created: '2026-09-06'
 modified: '2026-09-06'
+position: Producing
 tags:
-- Company
-apis: []
+  - Sales Enablement
+  - Revenue Operations
+  - Customer Collaboration
+  - Sales Engagement
+  - Customer Onboarding
+  - Mutual Action Plans
+  - CRM
+  - GraphQL
+  - MCP
+  - agent-native
+  - SaaS
+  - Company
+tags_raw:
+  - sales-enablement
+  - revenue-operations
+  - customer-collaboration
+  - sales-engagement
+  - customer-onboarding
+  - mutual-action-plans
+  - crm
+  - graphql
+  - mcp
+  - agent-native
+  - saas
+  - company
+apis:
+  - name: Accord Developer API (GraphQL)
+    description: >-
+      A single GraphQL endpoint exposing the Accord data model — accords, stages, steps, stakeholders, playbooks,
+      resources, summaries, engagement and CRM sync objects. The public reference documents 461 queries, 579 mutations
+      and 3 subscriptions over 692 object types. Relay-style cursor connections with condition/filter/orderBy arguments;
+      authentication is a workspace-scoped bearer API key created by a workspace admin. Listed by Accord as in beta and
+      requiring an Accord license that includes API access (Enterprise tier).
+    humanURL: https://developers.inaccord.com/
+    image: https://cdn.prod.website-files.com/68d3df3714cf3a122c1640dd/6916517cbf54f093700a336d_Home%20Page_OG-min.png
+    baseURL: https://api2.inaccord.com/graphql
+    tags:
+      - Sales Enablement
+      - Revenue Operations
+      - Customer Collaboration
+      - GraphQL
+      - CRM
+    tags_raw:
+      - sales-enablement
+      - revenue-operations
+      - customer-collaboration
+      - graphql
+      - crm
+    properties:
+      - type: GraphQL
+        url: https://api2.inaccord.com/graphql
+      - type: Documentation
+        url: https://developers.inaccord.com/
+      - type: APIReference
+        url: https://developers.inaccord.com/reference
+      - type: GettingStarted
+        url: https://developers.inaccord.com/quickstarts/accords
+      - type: Authentication
+        url: authentication/accordacff-authentication.yml
+      - type: Conventions
+        url: conventions/accordacff-conventions.yml
+      - type: ErrorCatalog
+        url: errors/accordacff-error-codes.yml
+      - type: DataModel
+        url: data-model/accordacff-data-model.yml
+      - type: AgentSkill
+        url: skills/_index.yml
+  - name: Accord MCP Server
+    description: >-
+      Hosted, remote Model Context Protocol server that wraps the Accord Developer API and exposes its read surface to
+      any MCP client (Claude, Claude Code, Cursor, Gemini CLI, ChatGPT). Streamable HTTP transport at
+      https://api.inaccord.com/1/mcp/mcp, authenticated with OAuth 2.1 + PKCE and dynamic client registration; scopes
+      mcp:read and mcp:write are advertised in the protected-resource metadata. Currently read-only and in beta,
+      available to workspaces with API access.
+    humanURL: https://collaboration.inaccord.com/knowledge/accord-mcp-server-setup-and-usage
+    image: https://cdn.prod.website-files.com/68d3df3714cf3a122c1640dd/6916517cbf54f093700a336d_Home%20Page_OG-min.png
+    baseURL: https://api.inaccord.com/1/mcp/mcp
+    tags:
+      - MCP
+      - agent-native
+      - Sales Enablement
+      - Revenue Operations
+    tags_raw:
+      - mcp
+      - agent-native
+      - sales-enablement
+      - revenue-operations
+    properties:
+      - type: MCPServer
+        url: mcp/accordacff-mcp.yml
+      - type: MCPServer
+        url: https://api.inaccord.com/1/mcp/mcp
+      - type: OAuthScopes
+        url: scopes/accordacff-scopes.yml
+      - type: Documentation
+        url: https://collaboration.inaccord.com/knowledge/accord-mcp-server-setup-and-usage
 maintainers:
-- FN: Kin Lane
-  email: kin@apievangelist.com
-- FN: APIs.json
-  email: info@apis.io
+  - FN: Kin Lane
+    email: kin@apievangelist.com
+  - FN: APIs.json
+    email: info@apis.io
 common:
-- type: Website
-  url: https://equityzen.com/company/accordacff
+  - type: DomainSecurity
+    url: security/accordacff-domain-security.yml
+  - type: Website
+    url: https://inaccord.com/
+  - type: DeveloperPortal
+    url: https://developers.inaccord.com/
+  - type: Documentation
+    url: https://developers.inaccord.com/
+  - type: APIReference
+    url: https://developers.inaccord.com/reference
+  - type: GettingStarted
+    url: https://developers.inaccord.com/quickstarts/accords
+  - type: Support
+    url: https://collaboration.inaccord.com/knowledge
+  - type: HelpCenter
+    url: https://collaboration.inaccord.com/knowledge
+  - type: Blog
+    url: https://inaccord.com/resources/blog
+  - type: Pricing
+    url: https://inaccord.com/pricing
+  - type: SignUp
+    url: https://inaccord.com/book-demo
+  - type: TermsOfService
+    url: https://inaccord.com/terms-of-service
+  - type: PrivacyPolicy
+    url: https://inaccord.com/privacy-policy
+  - type: GitHubOrganization
+    url: https://github.com/inaccord
+  - type: Authentication
+    url: authentication/accordacff-authentication.yml
+  - type: OAuthScopes
+    url: scopes/accordacff-scopes.yml
+  - type: Conventions
+    url: conventions/accordacff-conventions.yml
+  - type: ErrorCatalog
+    url: errors/accordacff-error-codes.yml
+  - type: DataModel
+    url: data-model/accordacff-data-model.yml
+  - type: Conformance
+    url: conformance/accordacff-conformance.yml
+  - type: Compliance
+    url: security/accordacff-trust-center.yml
+  - type: TrustCenter
+    url: security/accordacff-trust-center.yml
+  - type: Lifecycle
+    url: lifecycle/accordacff-lifecycle.yml
+  - type: Plans
+    url: plans/accordacff-plans-pricing.yml
+  - type: RateLimits
+    url: rate-limits/accordacff-rate-limits.yml
+  - type: WellKnown
+    url: well-known/accordacff-well-known.yml
+  - type: MCPServer
+    url: mcp/accordacff-mcp.yml
+  - type: AgentSkill
+    url: skills/_index.yml
+  - type: LLMsTxt
+    url: llms/accordacff-llms.txt
+  - type: GraphQL
+    url: graphql/accordacff-graphql-operations.yml
+
+x-enrichment:
+  date: '2026-09-06'
+  status: enriched
+  artifacts_added: 23
+  pass: local-v3

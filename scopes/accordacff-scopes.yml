@@ -1,0 +1,32 @@
+generated: '2026-09-06'
+method: probed
+source: https://api.inaccord.com/.well-known/oauth-authorization-server
+name: Accord OAuth scopes
+note: >-
+  Read from Accord's own RFC 8414 authorization-server metadata and RFC 9728 protected-resource metadata, both served
+  anonymously on api.inaccord.com. These scopes govern the Accord MCP server. The Accord Developer API (GraphQL) does
+  NOT use OAuth — it authenticates with a workspace-scoped bearer API key and has no scope surface; per Accord's
+  authentication page, "the same Row-Level Security rules that apply to in-app sessions apply to API key requests".
+  Accord publishes no separate scopes/permissions reference page; nothing beyond the metadata was found.
+docs: null
+flows:
+  - type: authorization_code
+    authorization_endpoint: https://api.inaccord.com/1/mcp/authorize
+    token_endpoint: https://api.inaccord.com/1/mcp/token
+    pkce_required: true
+    code_challenge_methods:
+      - S256
+  - type: refresh_token
+    token_endpoint: https://api.inaccord.com/1/mcp/token
+scope_count: 2
+scopes:
+  - name: mcp:read
+    description: >-
+      Read access through the Accord MCP server. Advertised in both the authorization-server and protected-resource
+      metadata. Accord documents the server as read-only in beta, so this is the scope in use today. No per-scope
+      description is published by Accord; this note records what the documentation states, not an inferred meaning.
+  - name: mcp:write
+    description: >-
+      Write access through the Accord MCP server. Advertised in the metadata, but Accord's announcement states the
+      server "currently reads from your Accord workspace" with write support planned, so this scope is declared ahead
+      of the capability. No per-scope description is published by Accord.

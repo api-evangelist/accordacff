@@ -1,0 +1,72 @@
+generated: '2026-09-06'
+method: searched
+source: https://collaboration.inaccord.com/knowledge/accord-mcp-server-setup-and-usage
+name: Accord MCP Server
+status: published
+description: >-
+  Hosted, remote Model Context Protocol server published by Accord. Per Accord's own announcement it "wraps our
+  Developer API and exposes the same read endpoints through a secure, standardized interface". Beta, read-only today,
+  available to workspaces with API access; Accord states write support is planned.
+deployment:
+  mode: remote
+  endpoint: https://api.inaccord.com/1/mcp/mcp
+  auth: oauth
+  verified: probed
+transport: streamable-http
+client_config_published: |
+  {
+    "mcpServers": {
+      "accord-mcp": {
+        "type": "http",
+        "url": "https://api.inaccord.com/1/mcp/mcp"
+      }
+    }
+  }
+oauth:
+  spec: OAuth 2.1 with PKCE
+  issuer: https://api.inaccord.com
+  authorization_endpoint: https://api.inaccord.com/1/mcp/authorize
+  token_endpoint: https://api.inaccord.com/1/mcp/token
+  registration_endpoint: https://api.inaccord.com/1/mcp/register
+  code_challenge_methods_supported:
+    - S256
+  scopes_supported:
+    - mcp:read
+    - mcp:write
+  dynamic_client_registration: true
+  source: https://api.inaccord.com/.well-known/oauth-authorization-server
+tools:
+  status: gated
+  count: null
+  note: >-
+    NOT ENUMERATED. An anonymous POST of {"jsonrpc":"2.0","id":1,"method":"tools/list"} to
+    https://api.inaccord.com/1/mcp/mcp returned HTTP 401 {"error":"unauthorized","error_description":"Bearer token
+    required"} on 2026-09-06, so the live tool list and its inputSchemas require an authenticated OAuth session.
+    Accord publishes no tool list in its docs and serves no llms.txt to fall back to, so no tool names are recorded
+    here. Accord states only that the server exposes the read surface of the GraphQL Developer API; the operation
+    inventory of that API is captured in graphql/accordacff-graphql-operations.yml.
+x-evidence:
+  - url: https://api.inaccord.com/1/mcp/mcp
+    method: POST tools/list
+    http_status: 401
+    body: '{"error":"unauthorized","error_description":"Bearer token required"}'
+    fetched: '2026-09-06'
+  - url: https://api.inaccord.com/.well-known/oauth-protected-resource
+    http_status: 200
+    fetched: '2026-09-06'
+  - url: https://api.inaccord.com/.well-known/oauth-authorization-server
+    http_status: 200
+    fetched: '2026-09-06'
+  - url: https://inaccord.com/blog-posts/introducing-the-accord-mcp-server
+    http_status: 200
+    fetched: '2026-09-06'
+supported_clients:
+  - Claude / Claude Code
+  - Cursor
+  - ChatGPT
+  - Gemini CLI
+crosswalk:
+  emitted: false
+  reason: >-
+    A tool crosswalk needs both a resolvable tool list and a REST contract to bind it to. Accord publishes no OpenAPI
+    (its only contract is GraphQL) and its MCP tools/list is auth-gated, so every row would be invented. Not written.

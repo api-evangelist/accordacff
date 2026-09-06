@@ -1,0 +1,40 @@
+generated: '2026-09-06'
+method: searched
+source: https://inaccord.com/product/security
+name: Accord trust and compliance
+trust_center_url: https://inaccord.com/product/security
+dedicated_trust_portal: false
+note: >-
+  Accord has no dedicated trust portal (no trust.inaccord.com, no Vanta/Drata/SafeBase-hosted trust centre was found).
+  Its compliance posture is published as a marketing product page. One named, third-party-auditable certification is
+  claimed there; everything else on the page is prose. Nothing beyond what the page states is recorded — no
+  sub-processor list, encryption specification, data-residency statement, pen-test summary or DPA link is published.
+certifications:
+  - name: SOC 2 Type II
+    status: claimed
+    evidence: https://inaccord.com/product/security
+    report_available: not stated
+    auditor: not stated
+  - name: SSO Authentication
+    status: capability (not a certification)
+    evidence: https://inaccord.com/product/security
+    detail: Accord's pricing page lists Single Sign-on under the Enterprise tier.
+  - name: GCP Secure
+    status: infrastructure claim
+    evidence: https://inaccord.com/product/security
+    detail: Accord states its platform runs on Google Cloud Platform.
+not_published:
+  - ISO 27001
+  - GDPR statement
+  - CCPA statement
+  - HIPAA
+  - FedRAMP
+  - PCI DSS
+  - sub-processor list
+  - penetration test summary
+  - data residency options
+  - DPA download
+legal:
+  terms_of_service: https://inaccord.com/terms-of-service
+  privacy_policy: https://inaccord.com/privacy-policy
+checked: '2026-09-06'

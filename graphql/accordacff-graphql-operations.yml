@@ -1,0 +1,2120 @@
+generated: '2026-09-06'
+method: searched
+source: https://developers.inaccord.com/sitemap.xml
+name: Accord Developer API — GraphQL operation catalog
+note: >-
+  Accord publishes no downloadable SDL and its live introspection endpoint is authenticated
+  (POST https://api2.inaccord.com/graphql with an anonymous introspection query returned HTTP 401
+  'Unauthorized' on 2026-09-06), so the schema itself could not be captured. This catalog is the
+  operation inventory harvested from Accord's own published, auto-generated GraphQL reference
+  (Docusaurus + graphql-markdown) via its sitemap. Each entry records the documentation page slug
+  verbatim and the GraphQL field name de-slugified from it; argument and return types are NOT
+  recorded here because they were not harvested. A full SDL requires authenticated introspection.
+endpoint: https://api2.inaccord.com/graphql
+reference: https://developers.inaccord.com/reference
+introspection:
+  anonymous: gated
+  probed: 'https://api2.inaccord.com/graphql'
+  http_status: 401
+  body: Unauthorized
+  checked: '2026-09-06'
+counts:
+  queries: 461
+  mutations: 579
+  subscriptions: 3
+  object_types: 692
+  input_types: 1130
+  enums: 99
+  scalars: 7
+  interfaces: 2
+  unions: 1
+  source_note: type counts read from the same sitemap (reference/types/* page counts)
+queries:
+  - field: accessModifier
+    doc: https://developers.inaccord.com/reference/operations/queries/access-modifier
+  - field: accessModifierByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/access-modifier-by-node-id
+  - field: accessModifierByWorkspaceAccountIdAndName
+    doc: https://developers.inaccord.com/reference/operations/queries/access-modifier-by-workspace-account-id-and-name
+  - field: accessModifiers
+    doc: https://developers.inaccord.com/reference/operations/queries/access-modifiers
+  - field: accessModifiersConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/access-modifiers-connection
+  - field: accord
+    doc: https://developers.inaccord.com/reference/operations/queries/accord
+  - field: accordByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-by-node-id
+  - field: accordCalendarEvent
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-calendar-event
+  - field: accordCalendarEventByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-calendar-event-by-node-id
+  - field: accordCalendarEventHistories
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-calendar-event-histories
+  - field: accordCalendarEventHistoriesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-calendar-event-histories-connection
+  - field: accordCalendarEventHistory
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-calendar-event-history
+  - field: accordCalendarEventHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-calendar-event-history-by-node-id
+  - field: accordCalendarEvents
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-calendar-events
+  - field: accordCalendarEventsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-calendar-events-connection
+  - field: accordContact
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-contact
+  - field: accordContactByAccordIdAndEmail
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-contact-by-accord-id-and-email
+  - field: accordContactByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-contact-by-node-id
+  - field: accordContacts
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-contacts
+  - field: accordContactsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-contacts-connection
+  - field: accordDomain
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-domain
+  - field: accordDomainByAccordIdAndDomain
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-domain-by-accord-id-and-domain
+  - field: accordDomainByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-domain-by-node-id
+  - field: accordDomains
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-domains
+  - field: accordDomainsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-domains-connection
+  - field: accordHealth
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-health
+  - field: accordHealthByAccordIdAndType
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-health-by-accord-id-and-type
+  - field: accordHealthByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-health-by-node-id
+  - field: accordLibrarySteps
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-library-steps
+  - field: accordMember
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-member
+  - field: accordMemberByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-member-by-node-id
+  - field: accordMembers
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-members
+  - field: accordMembersConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-members-connection
+  - field: accordPlaceholderRecommendations
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-placeholder-recommendations
+  - field: accordSearchViews
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-search-views
+  - field: accordSearchViewsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/accord-search-views-connection
+  - field: accords
+    doc: https://developers.inaccord.com/reference/operations/queries/accords
+  - field: accordsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/accords-connection
+  - field: account
+    doc: https://developers.inaccord.com/reference/operations/queries/account
+  - field: accountByEmail
+    doc: https://developers.inaccord.com/reference/operations/queries/account-by-email
+  - field: accountByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/account-by-node-id
+  - field: activities
+    doc: https://developers.inaccord.com/reference/operations/queries/activities
+  - field: activitiesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/activities-connection
+  - field: activity
+    doc: https://developers.inaccord.com/reference/operations/queries/activity
+  - field: activityByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/activity-by-node-id
+  - field: activityMetrics
+    doc: https://developers.inaccord.com/reference/operations/queries/activity-metrics
+  - field: agentProposal
+    doc: https://developers.inaccord.com/reference/operations/queries/agent-proposal
+  - field: agentProposalByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/agent-proposal-by-node-id
+  - field: agentProposals
+    doc: https://developers.inaccord.com/reference/operations/queries/agent-proposals
+  - field: agentProposalsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/agent-proposals-connection
+  - field: apiKey
+    doc: https://developers.inaccord.com/reference/operations/queries/api-key
+  - field: apiKeyByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/api-key-by-node-id
+  - field: apiKeys
+    doc: https://developers.inaccord.com/reference/operations/queries/api-keys
+  - field: apiKeysConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/api-keys-connection
+  - field: askAccord
+    doc: https://developers.inaccord.com/reference/operations/queries/ask-accord
+  - field: askAccordTeamRecommendations
+    doc: https://developers.inaccord.com/reference/operations/queries/ask-accord-team-recommendations
+  - field: assignedWorkspacePlaceholderRole
+    doc: https://developers.inaccord.com/reference/operations/queries/assigned-workspace-placeholder-role
+  - field: assignedWorkspacePlaceholderRoleByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/assigned-workspace-placeholder-role-by-node-id
+  - field: assignedWorkspacePlaceholderRoles
+    doc: https://developers.inaccord.com/reference/operations/queries/assigned-workspace-placeholder-roles
+  - field: assignedWorkspacePlaceholderRolesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/assigned-workspace-placeholder-roles-connection
+  - field: availableWorkspaces
+    doc: https://developers.inaccord.com/reference/operations/queries/available-workspaces
+  - field: backgroundJob
+    doc: https://developers.inaccord.com/reference/operations/queries/background-job
+  - field: backgroundJobByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/background-job-by-node-id
+  - field: backgroundJobByUniqueContextId
+    doc: https://developers.inaccord.com/reference/operations/queries/background-job-by-unique-context-id
+  - field: backgroundJobs
+    doc: https://developers.inaccord.com/reference/operations/queries/background-jobs
+  - field: backgroundJobsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/background-jobs-connection
+  - field: canRevertLibraryResourceVersion
+    doc: https://developers.inaccord.com/reference/operations/queries/can-revert-library-resource-version
+  - field: cleanAndProcessTitle
+    doc: https://developers.inaccord.com/reference/operations/queries/clean-and-process-title
+  - field: comment
+    doc: https://developers.inaccord.com/reference/operations/queries/comment
+  - field: commentByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/comment-by-node-id
+  - field: commentReaction
+    doc: https://developers.inaccord.com/reference/operations/queries/comment-reaction
+  - field: commentReactionByCommentIdAndCreatedByWorkspaceAccountIdAndEmojiCode
+    doc: https://developers.inaccord.com/reference/operations/queries/comment-reaction-by-comment-id-and-created-by-workspace-account-id-and-emoji-code
+  - field: commentReactionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/comment-reaction-by-node-id
+  - field: commentReactions
+    doc: https://developers.inaccord.com/reference/operations/queries/comment-reactions
+  - field: commentReactionsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/comment-reactions-connection
+  - field: comments
+    doc: https://developers.inaccord.com/reference/operations/queries/comments
+  - field: commentsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/comments-connection
+  - field: conditionType
+    doc: https://developers.inaccord.com/reference/operations/queries/condition-type
+  - field: conditionTypeAssociation
+    doc: https://developers.inaccord.com/reference/operations/queries/condition-type-association
+  - field: conditionTypeAssociationByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/condition-type-association-by-node-id
+  - field: conditionTypeAssociations
+    doc: https://developers.inaccord.com/reference/operations/queries/condition-type-associations
+  - field: conditionTypeAssociationsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/condition-type-associations-connection
+  - field: conditionTypeByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/condition-type-by-node-id
+  - field: conditionTypePlaybookUsage
+    doc: https://developers.inaccord.com/reference/operations/queries/condition-type-playbook-usage
+  - field: conditionTypes
+    doc: https://developers.inaccord.com/reference/operations/queries/condition-types
+  - field: conditionTypesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/condition-types-connection
+  - field: contactsFromCrm
+    doc: https://developers.inaccord.com/reference/operations/queries/contacts-from-crm
+  - field: createAirbyteConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/create-airbyte-connection
+  - field: crmObject
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object
+  - field: crmObjectByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-by-node-id
+  - field: crmObjectDescription
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-description
+  - field: crmObjectDescriptionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-description-by-node-id
+  - field: crmObjectDescriptions
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-descriptions
+  - field: crmObjectDescriptionsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-descriptions-connection
+  - field: crmObjectFieldDescription
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-field-description
+  - field: crmObjectFieldDescriptionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-field-description-by-node-id
+  - field: crmObjectFieldDescriptions
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-field-descriptions
+  - field: crmObjectFieldDescriptionsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-field-descriptions-connection
+  - field: crmObjectSync
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-sync
+  - field: crmObjectSyncByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-sync-by-node-id
+  - field: crmObjectSyncState
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-sync-state
+  - field: crmObjectSyncStateByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-sync-state-by-node-id
+  - field: crmObjectSyncStateHistories
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-sync-state-histories
+  - field: crmObjectSyncStateHistoriesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-sync-state-histories-connection
+  - field: crmObjectSyncStateHistory
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-sync-state-history
+  - field: crmObjectSyncStateHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-sync-state-history-by-node-id
+  - field: crmObjectSyncStates
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-sync-states
+  - field: crmObjectSyncStatesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-sync-states-connection
+  - field: crmObjectSyncs
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-syncs
+  - field: crmObjectSyncsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-object-syncs-connection
+  - field: crmObjects
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-objects
+  - field: crmObjectsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/crm-objects-connection
+  - field: customReaction
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-reaction
+  - field: customReactionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-reaction-by-node-id
+  - field: customReactions
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-reactions
+  - field: customReactionsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-reactions-connection
+  - field: customView
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view
+  - field: customViewByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-by-node-id
+  - field: customViewByWorkspaceAccountIdAndSourceCustomViewId
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-by-workspace-account-id-and-source-custom-view-id
+  - field: customViewTeam
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-team
+  - field: customViewTeamByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-team-by-node-id
+  - field: customViewTeamByWorkspaceIdAndCustomViewIdAndTeamId
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-team-by-workspace-id-and-custom-view-id-and-team-id
+  - field: customViewTeams
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-teams
+  - field: customViewTeamsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-teams-connection
+  - field: customViewWorkspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-workspace-account
+  - field: customViewWorkspaceAccountByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-workspace-account-by-node-id
+  - field: customViewWorkspaceAccountByWorkspaceIdAndCustomViewIdAndWorkspaceAccountId
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-workspace-account-by-workspace-id-and-custom-view-id-and-workspace-account-id
+  - field: customViewWorkspaceAccountHistories
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-workspace-account-histories
+  - field: customViewWorkspaceAccountHistoriesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-workspace-account-histories-connection
+  - field: customViewWorkspaceAccountHistory
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-workspace-account-history
+  - field: customViewWorkspaceAccountHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-workspace-account-history-by-node-id
+  - field: customViewWorkspaceAccounts
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-workspace-accounts
+  - field: customViewWorkspaceAccountsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-view-workspace-accounts-connection
+  - field: customViews
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-views
+  - field: customViewsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/custom-views-connection
+  - field: dataExportStatus
+    doc: https://developers.inaccord.com/reference/operations/queries/data-export-status
+  - field: dealCriteria
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria
+  - field: dealCriteriaAssociation
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association
+  - field: dealCriteriaAssociationByAccordIdAndDealCriteriaId
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-by-accord-id-and-deal-criteria-id
+  - field: dealCriteriaAssociationByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-by-node-id
+  - field: dealCriteriaAssociationHistories
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-histories
+  - field: dealCriteriaAssociationHistoriesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-histories-connection
+  - field: dealCriteriaAssociationHistory
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-history
+  - field: dealCriteriaAssociationHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-history-by-node-id
+  - field: dealCriteriaAssociationManagerScore
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-manager-score
+  - field: dealCriteriaAssociationManagerScoreByDealCriteriaAssociationId
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-manager-score-by-deal-criteria-association-id
+  - field: dealCriteriaAssociationManagerScoreByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-manager-score-by-node-id
+  - field: dealCriteriaAssociationManagerScoreHistories
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-manager-score-histories
+  - field: dealCriteriaAssociationManagerScoreHistoriesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-manager-score-histories-connection
+  - field: dealCriteriaAssociationManagerScoreHistory
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-manager-score-history
+  - field: dealCriteriaAssociationManagerScoreHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-manager-score-history-by-node-id
+  - field: dealCriteriaAssociationManagerScores
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-manager-scores
+  - field: dealCriteriaAssociationManagerScoresConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-association-manager-scores-connection
+  - field: dealCriteriaAssociations
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-associations
+  - field: dealCriteriaAssociationsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-associations-connection
+  - field: dealCriteriaConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-connection
+  - field: dealCriteriaHistories
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-histories
+  - field: dealCriteriaHistoriesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-histories-connection
+  - field: dealCriteriaHistory
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-history
+  - field: dealCriteriaHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-history-by-node-id
+  - field: dealCriteriaReport
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criteria-report
+  - field: dealCriterion
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criterion
+  - field: dealCriterionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-criterion-by-node-id
+  - field: dealExecutionScore
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-execution-score
+  - field: dealExecutionScoreByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-execution-score-by-node-id
+  - field: dealExecutionScoreHistories
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-execution-score-histories
+  - field: dealExecutionScoreHistoriesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-execution-score-histories-connection
+  - field: dealExecutionScoreHistory
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-execution-score-history
+  - field: dealExecutionScoreHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-execution-score-history-by-node-id
+  - field: dealExecutionScores
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-execution-scores
+  - field: dealExecutionScoresConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/deal-execution-scores-connection
+  - field: deleteAirbyteConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/delete-airbyte-connection
+  - field: discussion
+    doc: https://developers.inaccord.com/reference/operations/queries/discussion
+  - field: discussionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/discussion-by-node-id
+  - field: discussionWorkspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/queries/discussion-workspace-account
+  - field: discussionWorkspaceAccountByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/discussion-workspace-account-by-node-id
+  - field: discussionWorkspaceAccounts
+    doc: https://developers.inaccord.com/reference/operations/queries/discussion-workspace-accounts
+  - field: discussionWorkspaceAccountsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/discussion-workspace-accounts-connection
+  - field: discussions
+    doc: https://developers.inaccord.com/reference/operations/queries/discussions
+  - field: discussionsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/discussions-connection
+  - field: downloadExportedData
+    doc: https://developers.inaccord.com/reference/operations/queries/download-exported-data
+  - field: effectiveOwnerAccount
+    doc: https://developers.inaccord.com/reference/operations/queries/effective-owner-account
+  - field: email
+    doc: https://developers.inaccord.com/reference/operations/queries/email
+  - field: emailByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/email-by-node-id
+  - field: emails
+    doc: https://developers.inaccord.com/reference/operations/queries/emails
+  - field: emailsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/emails-connection
+  - field: eventLastActivities
+    doc: https://developers.inaccord.com/reference/operations/queries/event-last-activities
+  - field: eventLastActivitiesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/event-last-activities-connection
+  - field: eventLastActivity
+    doc: https://developers.inaccord.com/reference/operations/queries/event-last-activity
+  - field: eventLastActivityByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/event-last-activity-by-node-id
+  - field: eventLastActivityByWorkspaceAccountIdAndEventAndObjectIdAndObjectType
+    doc: https://developers.inaccord.com/reference/operations/queries/event-last-activity-by-workspace-account-id-and-event-and-object-id-and-object-type
+  - field: executiveSummaries
+    doc: https://developers.inaccord.com/reference/operations/queries/executive-summaries
+  - field: executiveSummariesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/executive-summaries-connection
+  - field: executiveSummary
+    doc: https://developers.inaccord.com/reference/operations/queries/executive-summary
+  - field: executiveSummaryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/executive-summary-by-node-id
+  - field: externalEvent
+    doc: https://developers.inaccord.com/reference/operations/queries/external-event
+  - field: externalEventByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/external-event-by-node-id
+  - field: externalEvents
+    doc: https://developers.inaccord.com/reference/operations/queries/external-events
+  - field: externalEventsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/external-events-connection
+  - field: externalService
+    doc: https://developers.inaccord.com/reference/operations/queries/external-service
+  - field: externalServiceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/external-service-by-node-id
+  - field: externalServiceRule
+    doc: https://developers.inaccord.com/reference/operations/queries/external-service-rule
+  - field: externalServiceRuleByExternalServiceIdAndRuleId
+    doc: https://developers.inaccord.com/reference/operations/queries/external-service-rule-by-external-service-id-and-rule-id
+  - field: externalServiceRuleByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/external-service-rule-by-node-id
+  - field: externalServiceRules
+    doc: https://developers.inaccord.com/reference/operations/queries/external-service-rules
+  - field: externalServiceRulesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/external-service-rules-connection
+  - field: externalServiceSync
+    doc: https://developers.inaccord.com/reference/operations/queries/external-service-sync
+  - field: externalServiceSyncByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/external-service-sync-by-node-id
+  - field: externalServiceSyncs
+    doc: https://developers.inaccord.com/reference/operations/queries/external-service-syncs
+  - field: externalServiceSyncsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/external-service-syncs-connection
+  - field: externalServices
+    doc: https://developers.inaccord.com/reference/operations/queries/external-services
+  - field: externalServicesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/external-services-connection
+  - field: externalShare
+    doc: https://developers.inaccord.com/reference/operations/queries/external-share
+  - field: externalShareByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/external-share-by-node-id
+  - field: favoriteAccords
+    doc: https://developers.inaccord.com/reference/operations/queries/favorite-accords
+  - field: favoriteAccordsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/favorite-accords-connection
+  - field: getAccountAutocomplete
+    doc: https://developers.inaccord.com/reference/operations/queries/get-account-autocomplete
+  - field: getAccountCompany
+    doc: https://developers.inaccord.com/reference/operations/queries/get-account-company
+  - field: getAllAccordLibraryResources
+    doc: https://developers.inaccord.com/reference/operations/queries/get-all-accord-library-resources
+  - field: getClearbitAutocomplete
+    doc: https://developers.inaccord.com/reference/operations/queries/get-clearbit-autocomplete
+  - field: getClearbitCompany
+    doc: https://developers.inaccord.com/reference/operations/queries/get-clearbit-company
+  - field: getCompanyBanners
+    doc: https://developers.inaccord.com/reference/operations/queries/get-company-banners
+  - field: getCrmConnectionOwnerInfo
+    doc: https://developers.inaccord.com/reference/operations/queries/get-crm-connection-owner-info
+  - field: getFreshSalesSchema
+    doc: https://developers.inaccord.com/reference/operations/queries/get-fresh-sales-schema
+  - field: getFreshsalesDeal
+    doc: https://developers.inaccord.com/reference/operations/queries/get-freshsales-deal
+  - field: getGongCallInformationByCallId
+    doc: https://developers.inaccord.com/reference/operations/queries/get-gong-call-information-by-call-id
+  - field: getGoogleDriveFilePickerToken
+    doc: https://developers.inaccord.com/reference/operations/queries/get-google-drive-file-picker-token
+  - field: getHubSpotCustomFields
+    doc: https://developers.inaccord.com/reference/operations/queries/get-hub-spot-custom-fields
+  - field: getHubSpotDealPrimaryCompany
+    doc: https://developers.inaccord.com/reference/operations/queries/get-hub-spot-deal-primary-company
+  - field: getHubSpotObjectProperties
+    doc: https://developers.inaccord.com/reference/operations/queries/get-hub-spot-object-properties
+  - field: getHubSpotSchema
+    doc: https://developers.inaccord.com/reference/operations/queries/get-hub-spot-schema
+  - field: getHubspotContact
+    doc: https://developers.inaccord.com/reference/operations/queries/get-hubspot-contact
+  - field: getHubspotDeal
+    doc: https://developers.inaccord.com/reference/operations/queries/get-hubspot-deal
+  - field: getHubspotPipelines
+    doc: https://developers.inaccord.com/reference/operations/queries/get-hubspot-pipelines
+  - field: getHubspotStagesByPipelineId
+    doc: https://developers.inaccord.com/reference/operations/queries/get-hubspot-stages-by-pipeline-id
+  - field: getMicrosoftTenantInfo
+    doc: https://developers.inaccord.com/reference/operations/queries/get-microsoft-tenant-info
+  - field: getResumableSignedUploadUrl
+    doc: https://developers.inaccord.com/reference/operations/queries/get-resumable-signed-upload-url
+  - field: getSalesforceCustomFields
+    doc: https://developers.inaccord.com/reference/operations/queries/get-salesforce-custom-fields
+  - field: getSalesforceLookupFields
+    doc: https://developers.inaccord.com/reference/operations/queries/get-salesforce-lookup-fields
+  - field: getSalesforceObjectDescription
+    doc: https://developers.inaccord.com/reference/operations/queries/get-salesforce-object-description
+  - field: getSalesforceSchema
+    doc: https://developers.inaccord.com/reference/operations/queries/get-salesforce-schema
+  - field: getSfdccontact
+    doc: https://developers.inaccord.com/reference/operations/queries/get-sfdccontact
+  - field: getSfdcobject
+    doc: https://developers.inaccord.com/reference/operations/queries/get-sfdcobject
+  - field: getSfdcstages
+    doc: https://developers.inaccord.com/reference/operations/queries/get-sfdcstages
+  - field: getSfdcuserAdminStatus
+    doc: https://developers.inaccord.com/reference/operations/queries/get-sfdcuser-admin-status
+  - field: getSlackChannels
+    doc: https://developers.inaccord.com/reference/operations/queries/get-slack-channels
+  - field: getSubscriptionPreferences
+    doc: https://developers.inaccord.com/reference/operations/queries/get-subscription-preferences
+  - field: getTranscodedVideoUrl
+    doc: https://developers.inaccord.com/reference/operations/queries/get-transcoded-video-url
+  - field: hub
+    doc: https://developers.inaccord.com/reference/operations/queries/hub
+  - field: hubByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/hub-by-node-id
+  - field: hubLibraryResource
+    doc: https://developers.inaccord.com/reference/operations/queries/hub-library-resource
+  - field: hubLibraryResourceByHubIdAndLibraryResourceId
+    doc: https://developers.inaccord.com/reference/operations/queries/hub-library-resource-by-hub-id-and-library-resource-id
+  - field: hubLibraryResourceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/hub-library-resource-by-node-id
+  - field: hubLibraryResources
+    doc: https://developers.inaccord.com/reference/operations/queries/hub-library-resources
+  - field: hubLibraryResourcesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/hub-library-resources-connection
+  - field: hubs
+    doc: https://developers.inaccord.com/reference/operations/queries/hubs
+  - field: hubsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/hubs-connection
+  - field: isSignedInWorkspaceSelection
+    doc: https://developers.inaccord.com/reference/operations/queries/is-signed-in-workspace-selection
+  - field: leaderboardReport
+    doc: https://developers.inaccord.com/reference/operations/queries/leaderboard-report
+  - field: libraryResource
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource
+  - field: libraryResourceAncestors
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-ancestors
+  - field: libraryResourceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-by-node-id
+  - field: libraryResourceDateRangeViews
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-date-range-views
+  - field: libraryResourceFolderContent
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-folder-content
+  - field: libraryResourceFolderContentByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-folder-content-by-node-id
+  - field: libraryResourceFolderContents
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-folder-contents
+  - field: libraryResourceFolderContentsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-folder-contents-connection
+  - field: libraryResourceTag
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-tag
+  - field: libraryResourceTagByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-tag-by-node-id
+  - field: libraryResourceTagByTagIdAndLibraryResourceId
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-tag-by-tag-id-and-library-resource-id
+  - field: libraryResourceTags
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-tags
+  - field: libraryResourceTagsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-tags-connection
+  - field: libraryResourceVersion
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-version
+  - field: libraryResourceVersionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-version-by-node-id
+  - field: libraryResourceVersionTimesUsed
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-version-times-used
+  - field: libraryResourceVersions
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-versions
+  - field: libraryResourceVersionsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resource-versions-connection
+  - field: libraryResources
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resources
+  - field: libraryResourcesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/library-resources-connection
+  - field: listLogs
+    doc: https://developers.inaccord.com/reference/operations/queries/list-logs
+  - field: meeting
+    doc: https://developers.inaccord.com/reference/operations/queries/meeting
+  - field: meetingAccord
+    doc: https://developers.inaccord.com/reference/operations/queries/meeting-accord
+  - field: meetingAccordByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/meeting-accord-by-node-id
+  - field: meetingAccordByWorkspaceIdAndMeetingIdAndAccordId
+    doc: https://developers.inaccord.com/reference/operations/queries/meeting-accord-by-workspace-id-and-meeting-id-and-accord-id
+  - field: meetingAccords
+    doc: https://developers.inaccord.com/reference/operations/queries/meeting-accords
+  - field: meetingAccordsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/meeting-accords-connection
+  - field: meetingByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/meeting-by-node-id
+  - field: meetingParticipant
+    doc: https://developers.inaccord.com/reference/operations/queries/meeting-participant
+  - field: meetingParticipantByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/meeting-participant-by-node-id
+  - field: meetingParticipants
+    doc: https://developers.inaccord.com/reference/operations/queries/meeting-participants
+  - field: meetingParticipantsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/meeting-participants-connection
+  - field: meetings
+    doc: https://developers.inaccord.com/reference/operations/queries/meetings
+  - field: meetingsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/meetings-connection
+  - field: myAccords
+    doc: https://developers.inaccord.com/reference/operations/queries/my-accords
+  - field: myAccordsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/my-accords-connection
+  - field: myPointPersonAccords
+    doc: https://developers.inaccord.com/reference/operations/queries/my-point-person-accords
+  - field: myPointPersonAccordsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/my-point-person-accords-connection
+  - field: node
+    doc: https://developers.inaccord.com/reference/operations/queries/node
+  - field: nodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/node-id
+  - field: note
+    doc: https://developers.inaccord.com/reference/operations/queries/note
+  - field: noteByAccordMemberId
+    doc: https://developers.inaccord.com/reference/operations/queries/note-by-accord-member-id
+  - field: noteByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/note-by-node-id
+  - field: notes
+    doc: https://developers.inaccord.com/reference/operations/queries/notes
+  - field: notesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/notes-connection
+  - field: notification
+    doc: https://developers.inaccord.com/reference/operations/queries/notification
+  - field: notificationByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/notification-by-node-id
+  - field: notifications
+    doc: https://developers.inaccord.com/reference/operations/queries/notifications
+  - field: notificationsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/notifications-connection
+  - field: numUpdatedColumns
+    doc: https://developers.inaccord.com/reference/operations/queries/num-updated-columns
+  - field: playbook
+    doc: https://developers.inaccord.com/reference/operations/queries/playbook
+  - field: playbookByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/playbook-by-node-id
+  - field: playbookReport
+    doc: https://developers.inaccord.com/reference/operations/queries/playbook-report
+  - field: playbooks
+    doc: https://developers.inaccord.com/reference/operations/queries/playbooks
+  - field: playbooksConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/playbooks-connection
+  - field: profile
+    doc: https://developers.inaccord.com/reference/operations/queries/profile
+  - field: profileByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/profile-by-node-id
+  - field: query
+    doc: https://developers.inaccord.com/reference/operations/queries/query
+  - field: resource
+    doc: https://developers.inaccord.com/reference/operations/queries/resource
+  - field: resourceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/resource-by-node-id
+  - field: resources
+    doc: https://developers.inaccord.com/reference/operations/queries/resources
+  - field: resourcesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/resources-connection
+  - field: rule
+    doc: https://developers.inaccord.com/reference/operations/queries/rule
+  - field: ruleByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/rule-by-node-id
+  - field: rules
+    doc: https://developers.inaccord.com/reference/operations/queries/rules
+  - field: rulesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/rules-connection
+  - field: searchFreshsalesDeal
+    doc: https://developers.inaccord.com/reference/operations/queries/search-freshsales-deal
+  - field: searchHubspotDeal
+    doc: https://developers.inaccord.com/reference/operations/queries/search-hubspot-deal
+  - field: searchHubspotDealContacts
+    doc: https://developers.inaccord.com/reference/operations/queries/search-hubspot-deal-contacts
+  - field: searchSalesforceAccountContacts
+    doc: https://developers.inaccord.com/reference/operations/queries/search-salesforce-account-contacts
+  - field: searchSalesforceOpportunityContacts
+    doc: https://developers.inaccord.com/reference/operations/queries/search-salesforce-opportunity-contacts
+  - field: searchSfdcobjects
+    doc: https://developers.inaccord.com/reference/operations/queries/search-sfdcobjects
+  - field: searchSfdcopportunities
+    doc: https://developers.inaccord.com/reference/operations/queries/search-sfdcopportunities
+  - field: section
+    doc: https://developers.inaccord.com/reference/operations/queries/section
+  - field: sectionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/section-by-node-id
+  - field: sectionPickListItem
+    doc: https://developers.inaccord.com/reference/operations/queries/section-pick-list-item
+  - field: sectionPickListItemByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/section-pick-list-item-by-node-id
+  - field: sectionPickListItems
+    doc: https://developers.inaccord.com/reference/operations/queries/section-pick-list-items
+  - field: sectionPickListItemsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/section-pick-list-items-connection
+  - field: sections
+    doc: https://developers.inaccord.com/reference/operations/queries/sections
+  - field: sectionsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/sections-connection
+  - field: sendInvitationEmail
+    doc: https://developers.inaccord.com/reference/operations/queries/send-invitation-email
+  - field: sendSampleInvitationEmail
+    doc: https://developers.inaccord.com/reference/operations/queries/send-sample-invitation-email
+  - field: session
+    doc: https://developers.inaccord.com/reference/operations/queries/session
+  - field: sessionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/session-by-node-id
+  - field: sessions
+    doc: https://developers.inaccord.com/reference/operations/queries/sessions
+  - field: sessionsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/sessions-connection
+  - field: sharedLibraryResource
+    doc: https://developers.inaccord.com/reference/operations/queries/shared-library-resource
+  - field: signOutWorkspaceSelection
+    doc: https://developers.inaccord.com/reference/operations/queries/sign-out-workspace-selection
+  - field: slackChannelWorkspace
+    doc: https://developers.inaccord.com/reference/operations/queries/slack-channel-workspace
+  - field: slackChannelWorkspaceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/slack-channel-workspace-by-node-id
+  - field: slackChannelWorkspaces
+    doc: https://developers.inaccord.com/reference/operations/queries/slack-channel-workspaces
+  - field: slackChannelWorkspacesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/slack-channel-workspaces-connection
+  - field: stage
+    doc: https://developers.inaccord.com/reference/operations/queries/stage
+  - field: stageByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/stage-by-node-id
+  - field: stages
+    doc: https://developers.inaccord.com/reference/operations/queries/stages
+  - field: stagesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/stages-connection
+  - field: step
+    doc: https://developers.inaccord.com/reference/operations/queries/step
+  - field: stepApproval
+    doc: https://developers.inaccord.com/reference/operations/queries/step-approval
+  - field: stepApprovalByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-approval-by-node-id
+  - field: stepApprovalByStepId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-approval-by-step-id
+  - field: stepApprovals
+    doc: https://developers.inaccord.com/reference/operations/queries/step-approvals
+  - field: stepApprovalsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/step-approvals-connection
+  - field: stepByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-by-node-id
+  - field: stepDependencies
+    doc: https://developers.inaccord.com/reference/operations/queries/step-dependencies
+  - field: stepDependenciesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/step-dependencies-connection
+  - field: stepDependency
+    doc: https://developers.inaccord.com/reference/operations/queries/step-dependency
+  - field: stepDependencyByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-dependency-by-node-id
+  - field: stepDependencyByStepIdAndDependentStepId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-dependency-by-step-id-and-dependent-step-id
+  - field: stepEffectiveOwnerAccount
+    doc: https://developers.inaccord.com/reference/operations/queries/step-effective-owner-account
+  - field: stepInternalProcess
+    doc: https://developers.inaccord.com/reference/operations/queries/step-internal-process
+  - field: stepInternalProcessByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-internal-process-by-node-id
+  - field: stepInternalProcessByStepId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-internal-process-by-step-id
+  - field: stepInternalProcessByWorkspaceIdAndStepId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-internal-process-by-workspace-id-and-step-id
+  - field: stepInternalProcesses
+    doc: https://developers.inaccord.com/reference/operations/queries/step-internal-processes
+  - field: stepInternalProcessesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/step-internal-processes-connection
+  - field: stepMeeting
+    doc: https://developers.inaccord.com/reference/operations/queries/step-meeting
+  - field: stepMeetingByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-meeting-by-node-id
+  - field: stepMeetingByStepId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-meeting-by-step-id
+  - field: stepMeetings
+    doc: https://developers.inaccord.com/reference/operations/queries/step-meetings
+  - field: stepMeetingsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/step-meetings-connection
+  - field: stepResource
+    doc: https://developers.inaccord.com/reference/operations/queries/step-resource
+  - field: stepResourceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-resource-by-node-id
+  - field: stepResources
+    doc: https://developers.inaccord.com/reference/operations/queries/step-resources
+  - field: stepResourcesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/step-resources-connection
+  - field: stepStakeholder
+    doc: https://developers.inaccord.com/reference/operations/queries/step-stakeholder
+  - field: stepStakeholderByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-stakeholder-by-node-id
+  - field: stepStakeholderByWorkspaceAccountIdAndStepId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-stakeholder-by-workspace-account-id-and-step-id
+  - field: stepStakeholders
+    doc: https://developers.inaccord.com/reference/operations/queries/step-stakeholders
+  - field: stepStakeholdersConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/step-stakeholders-connection
+  - field: stepToDo
+    doc: https://developers.inaccord.com/reference/operations/queries/step-to-do
+  - field: stepToDoByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-to-do-by-node-id
+  - field: stepToDoByStepId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-to-do-by-step-id
+  - field: stepToDoTask
+    doc: https://developers.inaccord.com/reference/operations/queries/step-to-do-task
+  - field: stepToDoTaskByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/step-to-do-task-by-node-id
+  - field: stepToDoTasks
+    doc: https://developers.inaccord.com/reference/operations/queries/step-to-do-tasks
+  - field: stepToDoTasksConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/step-to-do-tasks-connection
+  - field: stepToDos
+    doc: https://developers.inaccord.com/reference/operations/queries/step-to-dos
+  - field: stepToDosConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/step-to-dos-connection
+  - field: steps
+    doc: https://developers.inaccord.com/reference/operations/queries/steps
+  - field: stepsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/steps-connection
+  - field: subscriptionPreference
+    doc: https://developers.inaccord.com/reference/operations/queries/subscription-preference
+  - field: subscriptionPreferenceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/subscription-preference-by-node-id
+  - field: subscriptionPreferences
+    doc: https://developers.inaccord.com/reference/operations/queries/subscription-preferences
+  - field: subscriptionPreferencesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/subscription-preferences-connection
+  - field: summaries
+    doc: https://developers.inaccord.com/reference/operations/queries/summaries
+  - field: summariesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/summaries-connection
+  - field: summary
+    doc: https://developers.inaccord.com/reference/operations/queries/summary
+  - field: summaryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/summary-by-node-id
+  - field: tag
+    doc: https://developers.inaccord.com/reference/operations/queries/tag
+  - field: tagByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/tag-by-node-id
+  - field: tagByWorkspaceIdAndName
+    doc: https://developers.inaccord.com/reference/operations/queries/tag-by-workspace-id-and-name
+  - field: tags
+    doc: https://developers.inaccord.com/reference/operations/queries/tags
+  - field: tagsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/tags-connection
+  - field: team
+    doc: https://developers.inaccord.com/reference/operations/queries/team
+  - field: teamByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/team-by-node-id
+  - field: teamByWorkspaceIdAndName
+    doc: https://developers.inaccord.com/reference/operations/queries/team-by-workspace-id-and-name
+  - field: teamMember
+    doc: https://developers.inaccord.com/reference/operations/queries/team-member
+  - field: teamMemberByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/team-member-by-node-id
+  - field: teamMemberByWorkspaceIdAndTeamIdAndWorkspaceAccountId
+    doc: https://developers.inaccord.com/reference/operations/queries/team-member-by-workspace-id-and-team-id-and-workspace-account-id
+  - field: teamMembers
+    doc: https://developers.inaccord.com/reference/operations/queries/team-members
+  - field: teamMembersConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/team-members-connection
+  - field: teams
+    doc: https://developers.inaccord.com/reference/operations/queries/teams
+  - field: teamsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/teams-connection
+  - field: triggerAirbyteSync
+    doc: https://developers.inaccord.com/reference/operations/queries/trigger-airbyte-sync
+  - field: unDeletableAccordObjects
+    doc: https://developers.inaccord.com/reference/operations/queries/un-deletable-accord-objects
+  - field: updateAirbyteSource
+    doc: https://developers.inaccord.com/reference/operations/queries/update-airbyte-source
+  - field: userFlagsByContext
+    doc: https://developers.inaccord.com/reference/operations/queries/user-flags-by-context
+  - field: userSubscription
+    doc: https://developers.inaccord.com/reference/operations/queries/user-subscription
+  - field: userSubscriptionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/user-subscription-by-node-id
+  - field: userSubscriptions
+    doc: https://developers.inaccord.com/reference/operations/queries/user-subscriptions
+  - field: userSubscriptionsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/user-subscriptions-connection
+  - field: validationRule
+    doc: https://developers.inaccord.com/reference/operations/queries/validation-rule
+  - field: validationRules
+    doc: https://developers.inaccord.com/reference/operations/queries/validation-rules
+  - field: workspace
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace
+  - field: workspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-account
+  - field: workspaceAccountByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-account-by-node-id
+  - field: workspaceAccountByWorkspaceIdAndAccountId
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-account-by-workspace-id-and-account-id
+  - field: workspaceAccountManager
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-account-manager
+  - field: workspaceAccountManagerByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-account-manager-by-node-id
+  - field: workspaceAccountManagerByWorkspaceAccountId
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-account-manager-by-workspace-account-id
+  - field: workspaceAccountManagers
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-account-managers
+  - field: workspaceAccountManagersConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-account-managers-connection
+  - field: workspaceAccounts
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-accounts
+  - field: workspaceAccountsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-accounts-connection
+  - field: workspaceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-by-node-id
+  - field: workspaceDocument
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-document
+  - field: workspaceDocumentByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-document-by-node-id
+  - field: workspaceDocuments
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-documents
+  - field: workspaceDocumentsConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-documents-connection
+  - field: workspaceEssentialAccounts
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-essential-accounts
+  - field: workspacePlaceholderRole
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-placeholder-role
+  - field: workspacePlaceholderRoleByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-placeholder-role-by-node-id
+  - field: workspacePlaceholderRoleByWorkspaceIdAndInternalName
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-placeholder-role-by-workspace-id-and-internal-name
+  - field: workspacePlaceholderRoles
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-placeholder-roles
+  - field: workspacePlaceholderRolesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-placeholder-roles-connection
+  - field: workspacePreference
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-preference
+  - field: workspacePreferenceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-preference-by-node-id
+  - field: workspacePreferences
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-preferences
+  - field: workspacePreferencesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/workspace-preferences-connection
+  - field: workspaces
+    doc: https://developers.inaccord.com/reference/operations/queries/workspaces
+  - field: workspacesConnection
+    doc: https://developers.inaccord.com/reference/operations/queries/workspaces-connection
+mutations:
+  - field: acceptInvitation
+    doc: https://developers.inaccord.com/reference/operations/mutations/accept-invitation
+  - field: actionAgentProposal
+    doc: https://developers.inaccord.com/reference/operations/mutations/action-agent-proposal
+  - field: addLibraryStageToAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/add-library-stage-to-accord
+  - field: addLibraryStepToStage
+    doc: https://developers.inaccord.com/reference/operations/mutations/add-library-step-to-stage
+  - field: addToLibraryResourceFolder
+    doc: https://developers.inaccord.com/reference/operations/mutations/add-to-library-resource-folder
+  - field: addWorkspacePlaceholderToAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/add-workspace-placeholder-to-accord
+  - field: assignMeetingToAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/assign-meeting-to-accord
+  - field: assignPlaceholderAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/assign-placeholder-account
+  - field: assignPointPerson
+    doc: https://developers.inaccord.com/reference/operations/mutations/assign-point-person
+  - field: assignWorkspacePlaceholder
+    doc: https://developers.inaccord.com/reference/operations/mutations/assign-workspace-placeholder
+  - field: authenticateEmail
+    doc: https://developers.inaccord.com/reference/operations/mutations/authenticate-email
+  - field: authenticateInternalService
+    doc: https://developers.inaccord.com/reference/operations/mutations/authenticate-internal-service
+  - field: autoCreateAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/auto-create-accord
+  - field: batchActionAgentProposals
+    doc: https://developers.inaccord.com/reference/operations/mutations/batch-action-agent-proposals
+  - field: bulkEnrichLibraryResources
+    doc: https://developers.inaccord.com/reference/operations/mutations/bulk-enrich-library-resources
+  - field: connectGoogleCalendar
+    doc: https://developers.inaccord.com/reference/operations/mutations/connect-google-calendar
+  - field: copySectionToSummary
+    doc: https://developers.inaccord.com/reference/operations/mutations/copy-section-to-summary
+  - field: copyStageToAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/copy-stage-to-accord
+  - field: copyStageToPlaybook
+    doc: https://developers.inaccord.com/reference/operations/mutations/copy-stage-to-playbook
+  - field: copyStepToPlaybook
+    doc: https://developers.inaccord.com/reference/operations/mutations/copy-step-to-playbook
+  - field: copyStepToStage
+    doc: https://developers.inaccord.com/reference/operations/mutations/copy-step-to-stage
+  - field: copySummaryToAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/copy-summary-to-accord
+  - field: createAccessModifier
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-access-modifier
+  - field: createAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-accord
+  - field: createAccordCalendarEvent
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-accord-calendar-event
+  - field: createAccordCalendarEventHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-accord-calendar-event-history
+  - field: createAccordContact
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-accord-contact
+  - field: createAccordDomain
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-accord-domain
+  - field: createAccordMember
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-accord-member
+  - field: createAccordTemplate
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-accord-template
+  - field: createAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-account
+  - field: createApiKey
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-api-key
+  - field: createComment
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-comment
+  - field: createCommentReaction
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-comment-reaction
+  - field: createConditionType
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-condition-type
+  - field: createConditionTypeAssociation
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-condition-type-association
+  - field: createCrmObjectSync
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-crm-object-sync
+  - field: createCrmObjectSyncState
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-crm-object-sync-state
+  - field: createCrmObjectSyncStateHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-crm-object-sync-state-history
+  - field: createCustomReaction
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-custom-reaction
+  - field: createCustomView
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-custom-view
+  - field: createCustomViewTeam
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-custom-view-team
+  - field: createCustomViewWorkspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-custom-view-workspace-account
+  - field: createCustomViewWorkspaceAccountHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-custom-view-workspace-account-history
+  - field: createDataExport
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-data-export
+  - field: createDealCriteriaAssociation
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-deal-criteria-association
+  - field: createDealCriteriaAssociationHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-deal-criteria-association-history
+  - field: createDealCriteriaAssociationManagerScore
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-deal-criteria-association-manager-score
+  - field: createDealCriteriaAssociationManagerScoreHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-deal-criteria-association-manager-score-history
+  - field: createDealCriteriaHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-deal-criteria-history
+  - field: createDealCriterion
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-deal-criterion
+  - field: createDealExecutionScoreHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-deal-execution-score-history
+  - field: createDefaultCustomViews
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-default-custom-views
+  - field: createDiscussion
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-discussion
+  - field: createDiscussionWorkspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-discussion-workspace-account
+  - field: createEmail
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-email
+  - field: createEventLastActivity
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-event-last-activity
+  - field: createExecutiveSummary
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-executive-summary
+  - field: createExecutiveSummaryPlaceholder
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-executive-summary-placeholder
+  - field: createExternalEvent
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-external-event
+  - field: createExternalServiceRule
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-external-service-rule
+  - field: createExternalShare
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-external-share
+  - field: createHub
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-hub
+  - field: createHubLibraryResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-hub-library-resource
+  - field: createLibraryResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-library-resource
+  - field: createLibraryResourceTag
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-library-resource-tag
+  - field: createLibraryResourceVersion
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-library-resource-version
+  - field: createMeeting
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-meeting
+  - field: createMeetingAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-meeting-accord
+  - field: createMeetingParticipant
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-meeting-participant
+  - field: createNote
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-note
+  - field: createNotification
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-notification
+  - field: createOrRecoverAccordDomain
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-or-recover-accord-domain
+  - field: createOrUpdateWorkspacePreference
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-or-update-workspace-preference
+  - field: createPlaceholderAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-placeholder-account
+  - field: createPlaybook
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-playbook
+  - field: createProfile
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-profile
+  - field: createResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-resource
+  - field: createSection
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-section
+  - field: createSectionPickListItem
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-section-pick-list-item
+  - field: createSectionType
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-section-type
+  - field: createSlackChannelWorkspace
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-slack-channel-workspace
+  - field: createStage
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-stage
+  - field: createStep
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-step
+  - field: createStepApproval
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-step-approval
+  - field: createStepDependency
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-step-dependency
+  - field: createStepInternalProcess
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-step-internal-process
+  - field: createStepMeeting
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-step-meeting
+  - field: createStepResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-step-resource
+  - field: createStepResources
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-step-resources
+  - field: createStepStakeholder
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-step-stakeholder
+  - field: createStepToDo
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-step-to-do
+  - field: createStepToDoTask
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-step-to-do-task
+  - field: createSubscription
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-subscription
+  - field: createSummary
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-summary
+  - field: createTag
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-tag
+  - field: createTeam
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-team
+  - field: createTeamMember
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-team-member
+  - field: createUserSubscription
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-user-subscription
+  - field: createWorkspace
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-workspace
+  - field: createWorkspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-workspace-account
+  - field: createWorkspaceAccountManager
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-workspace-account-manager
+  - field: createWorkspaceDocument
+    doc: https://developers.inaccord.com/reference/operations/mutations/create-workspace-document
+  - field: deleteAccessModifier
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-access-modifier
+  - field: deleteAccessModifierByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-access-modifier-by-node-id
+  - field: deleteAccessModifierByWorkspaceAccountIdAndName
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-access-modifier-by-workspace-account-id-and-name
+  - field: deleteAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord
+  - field: deleteAccordByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-by-node-id
+  - field: deleteAccordCalendarEvent
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-calendar-event
+  - field: deleteAccordCalendarEventByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-calendar-event-by-node-id
+  - field: deleteAccordCalendarEventHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-calendar-event-history
+  - field: deleteAccordCalendarEventHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-calendar-event-history-by-node-id
+  - field: deleteAccordContact
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-contact
+  - field: deleteAccordContactByAccordIdAndEmail
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-contact-by-accord-id-and-email
+  - field: deleteAccordContactByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-contact-by-node-id
+  - field: deleteAccordDomain
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-domain
+  - field: deleteAccordDomainByAccordIdAndDomain
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-domain-by-accord-id-and-domain
+  - field: deleteAccordDomainByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-domain-by-node-id
+  - field: deleteAccordMember
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-member
+  - field: deleteAccordMemberByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-accord-member-by-node-id
+  - field: deleteAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-account
+  - field: deleteAccountByEmail
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-account-by-email
+  - field: deleteAccountByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-account-by-node-id
+  - field: deleteApiKey
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-api-key
+  - field: deleteApiKeyByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-api-key-by-node-id
+  - field: deleteComment
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-comment
+  - field: deleteCommentByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-comment-by-node-id
+  - field: deleteCommentReaction
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-comment-reaction
+  - field: deleteCommentReactionByCommentIdAndCreatedByWorkspaceAccountIdAndEmojiCode
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-comment-reaction-by-comment-id-and-created-by-workspace-account-id-and-emoji-code
+  - field: deleteCommentReactionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-comment-reaction-by-node-id
+  - field: deleteConditionType
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-condition-type
+  - field: deleteConditionTypeAssociation
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-condition-type-association
+  - field: deleteConditionTypeAssociationByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-condition-type-association-by-node-id
+  - field: deleteConditionTypeByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-condition-type-by-node-id
+  - field: deleteCrmObject
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-crm-object
+  - field: deleteCrmObjectByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-crm-object-by-node-id
+  - field: deleteCrmObjectSync
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-crm-object-sync
+  - field: deleteCrmObjectSyncByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-crm-object-sync-by-node-id
+  - field: deleteCrmObjectSyncState
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-crm-object-sync-state
+  - field: deleteCrmObjectSyncStateByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-crm-object-sync-state-by-node-id
+  - field: deleteCrmObjectSyncStateHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-crm-object-sync-state-history
+  - field: deleteCrmObjectSyncStateHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-crm-object-sync-state-history-by-node-id
+  - field: deleteCustomReaction
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-reaction
+  - field: deleteCustomReactionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-reaction-by-node-id
+  - field: deleteCustomView
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-view
+  - field: deleteCustomViewByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-view-by-node-id
+  - field: deleteCustomViewByWorkspaceAccountIdAndSourceCustomViewId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-view-by-workspace-account-id-and-source-custom-view-id
+  - field: deleteCustomViewTeam
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-view-team
+  - field: deleteCustomViewTeamByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-view-team-by-node-id
+  - field: deleteCustomViewTeamByWorkspaceIdAndCustomViewIdAndTeamId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-view-team-by-workspace-id-and-custom-view-id-and-team-id
+  - field: deleteCustomViewWorkspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-view-workspace-account
+  - field: deleteCustomViewWorkspaceAccountByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-view-workspace-account-by-node-id
+  - field: deleteCustomViewWorkspaceAccountByWorkspaceIdAndCustomViewIdAndWorkspaceAccountId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-view-workspace-account-by-workspace-id-and-custom-view-id-and-workspace-account-id
+  - field: deleteCustomViewWorkspaceAccountHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-view-workspace-account-history
+  - field: deleteCustomViewWorkspaceAccountHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-custom-view-workspace-account-history-by-node-id
+  - field: deleteDealCriteriaAssociation
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criteria-association
+  - field: deleteDealCriteriaAssociationByAccordIdAndDealCriteriaId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criteria-association-by-accord-id-and-deal-criteria-id
+  - field: deleteDealCriteriaAssociationByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criteria-association-by-node-id
+  - field: deleteDealCriteriaAssociationHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criteria-association-history
+  - field: deleteDealCriteriaAssociationHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criteria-association-history-by-node-id
+  - field: deleteDealCriteriaAssociationManagerScore
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criteria-association-manager-score
+  - field: deleteDealCriteriaAssociationManagerScoreByDealCriteriaAssociationId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criteria-association-manager-score-by-deal-criteria-association-id
+  - field: deleteDealCriteriaAssociationManagerScoreByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criteria-association-manager-score-by-node-id
+  - field: deleteDealCriteriaAssociationManagerScoreHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criteria-association-manager-score-history
+  - field: deleteDealCriteriaAssociationManagerScoreHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criteria-association-manager-score-history-by-node-id
+  - field: deleteDealCriteriaHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criteria-history
+  - field: deleteDealCriteriaHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criteria-history-by-node-id
+  - field: deleteDealCriterion
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criterion
+  - field: deleteDealCriterionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-criterion-by-node-id
+  - field: deleteDealExecutionScoreHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-execution-score-history
+  - field: deleteDealExecutionScoreHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-deal-execution-score-history-by-node-id
+  - field: deleteDiscussion
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-discussion
+  - field: deleteDiscussionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-discussion-by-node-id
+  - field: deleteDiscussionWorkspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-discussion-workspace-account
+  - field: deleteDiscussionWorkspaceAccountByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-discussion-workspace-account-by-node-id
+  - field: deleteEmail
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-email
+  - field: deleteEmailByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-email-by-node-id
+  - field: deleteEventLastActivity
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-event-last-activity
+  - field: deleteEventLastActivityByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-event-last-activity-by-node-id
+  - field: deleteEventLastActivityByWorkspaceAccountIdAndEventAndObjectIdAndObjectType
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-event-last-activity-by-workspace-account-id-and-event-and-object-id-and-object-type
+  - field: deleteExecutiveSummary
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-executive-summary
+  - field: deleteExecutiveSummaryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-executive-summary-by-node-id
+  - field: deleteExternalEvent
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-external-event
+  - field: deleteExternalEventByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-external-event-by-node-id
+  - field: deleteExternalService
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-external-service
+  - field: deleteExternalServiceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-external-service-by-node-id
+  - field: deleteExternalServiceSync
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-external-service-sync
+  - field: deleteExternalServiceSyncByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-external-service-sync-by-node-id
+  - field: deleteExternalShare
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-external-share
+  - field: deleteExternalShareByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-external-share-by-node-id
+  - field: deleteHub
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-hub
+  - field: deleteHubByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-hub-by-node-id
+  - field: deleteHubLibraryResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-hub-library-resource
+  - field: deleteHubLibraryResourceByHubIdAndLibraryResourceId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-hub-library-resource-by-hub-id-and-library-resource-id
+  - field: deleteHubLibraryResourceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-hub-library-resource-by-node-id
+  - field: deleteLibraryResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-library-resource
+  - field: deleteLibraryResourceFolderContent
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-library-resource-folder-content
+  - field: deleteLibraryResourceFolderContentByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-library-resource-folder-content-by-node-id
+  - field: deleteLibraryResourceTag
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-library-resource-tag
+  - field: deleteLibraryResourceTagByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-library-resource-tag-by-node-id
+  - field: deleteLibraryResourceTagByTagIdAndLibraryResourceId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-library-resource-tag-by-tag-id-and-library-resource-id
+  - field: deleteMeeting
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-meeting
+  - field: deleteMeetingAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-meeting-accord
+  - field: deleteMeetingAccordByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-meeting-accord-by-node-id
+  - field: deleteMeetingAccordByWorkspaceIdAndMeetingIdAndAccordId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-meeting-accord-by-workspace-id-and-meeting-id-and-accord-id
+  - field: deleteMeetingByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-meeting-by-node-id
+  - field: deleteMeetingData
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-meeting-data
+  - field: deleteMeetingParticipant
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-meeting-participant
+  - field: deleteMeetingParticipantByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-meeting-participant-by-node-id
+  - field: deleteNote
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-note
+  - field: deleteNoteByAccordMemberId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-note-by-accord-member-id
+  - field: deleteNoteByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-note-by-node-id
+  - field: deleteNotification
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-notification
+  - field: deleteNotificationByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-notification-by-node-id
+  - field: deletePlaybook
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-playbook
+  - field: deletePlaybookByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-playbook-by-node-id
+  - field: deleteResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-resource
+  - field: deleteResourceBulk
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-resource-bulk
+  - field: deleteResourceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-resource-by-node-id
+  - field: deleteRule
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-rule
+  - field: deleteRuleByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-rule-by-node-id
+  - field: deleteSection
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-section
+  - field: deleteSectionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-section-by-node-id
+  - field: deleteSectionPickListItem
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-section-pick-list-item
+  - field: deleteSectionPickListItemByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-section-pick-list-item-by-node-id
+  - field: deleteSlackChannelWorkspace
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-slack-channel-workspace
+  - field: deleteSlackChannelWorkspaceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-slack-channel-workspace-by-node-id
+  - field: deleteStage
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-stage
+  - field: deleteStageByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-stage-by-node-id
+  - field: deleteStep
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step
+  - field: deleteStepApproval
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-approval
+  - field: deleteStepApprovalByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-approval-by-node-id
+  - field: deleteStepApprovalByStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-approval-by-step-id
+  - field: deleteStepByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-by-node-id
+  - field: deleteStepDependency
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-dependency
+  - field: deleteStepDependencyByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-dependency-by-node-id
+  - field: deleteStepDependencyByStepIdAndDependentStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-dependency-by-step-id-and-dependent-step-id
+  - field: deleteStepInternalProcess
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-internal-process
+  - field: deleteStepInternalProcessByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-internal-process-by-node-id
+  - field: deleteStepInternalProcessByStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-internal-process-by-step-id
+  - field: deleteStepInternalProcessByWorkspaceIdAndStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-internal-process-by-workspace-id-and-step-id
+  - field: deleteStepMeeting
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-meeting
+  - field: deleteStepMeetingByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-meeting-by-node-id
+  - field: deleteStepMeetingByStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-meeting-by-step-id
+  - field: deleteStepResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-resource
+  - field: deleteStepResourceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-resource-by-node-id
+  - field: deleteStepStakeholder
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-stakeholder
+  - field: deleteStepStakeholderByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-stakeholder-by-node-id
+  - field: deleteStepStakeholderByWorkspaceAccountIdAndStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-stakeholder-by-workspace-account-id-and-step-id
+  - field: deleteStepToDo
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-to-do
+  - field: deleteStepToDoByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-to-do-by-node-id
+  - field: deleteStepToDoByStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-to-do-by-step-id
+  - field: deleteStepToDoTask
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-to-do-task
+  - field: deleteStepToDoTaskByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-step-to-do-task-by-node-id
+  - field: deleteSubscriptionPreference
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-subscription-preference
+  - field: deleteSubscriptionPreferenceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-subscription-preference-by-node-id
+  - field: deleteSummary
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-summary
+  - field: deleteSummaryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-summary-by-node-id
+  - field: deleteTag
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-tag
+  - field: deleteTagByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-tag-by-node-id
+  - field: deleteTagByWorkspaceIdAndName
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-tag-by-workspace-id-and-name
+  - field: deleteTeam
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-team
+  - field: deleteTeamByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-team-by-node-id
+  - field: deleteTeamByWorkspaceIdAndName
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-team-by-workspace-id-and-name
+  - field: deleteTeamMember
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-team-member
+  - field: deleteTeamMemberByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-team-member-by-node-id
+  - field: deleteTeamMemberByWorkspaceIdAndTeamIdAndWorkspaceAccountId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-team-member-by-workspace-id-and-team-id-and-workspace-account-id
+  - field: deleteUserSubscription
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-user-subscription
+  - field: deleteUserSubscriptionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-user-subscription-by-node-id
+  - field: deleteWorkspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-account
+  - field: deleteWorkspaceAccountByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-account-by-node-id
+  - field: deleteWorkspaceAccountByWorkspaceIdAndAccountId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-account-by-workspace-id-and-account-id
+  - field: deleteWorkspaceAccountManager
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-account-manager
+  - field: deleteWorkspaceAccountManagerByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-account-manager-by-node-id
+  - field: deleteWorkspaceAccountManagerByWorkspaceAccountId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-account-manager-by-workspace-account-id
+  - field: deleteWorkspaceDocument
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-document
+  - field: deleteWorkspaceDocumentByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-document-by-node-id
+  - field: deleteWorkspacePlaceholderRole
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-placeholder-role
+  - field: deleteWorkspacePlaceholderRoleByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-placeholder-role-by-node-id
+  - field: deleteWorkspacePlaceholderRoleByWorkspaceIdAndInternalName
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-placeholder-role-by-workspace-id-and-internal-name
+  - field: deleteWorkspacePreference
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-preference
+  - field: deleteWorkspacePreferenceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/delete-workspace-preference-by-node-id
+  - field: detachLibraryStage
+    doc: https://developers.inaccord.com/reference/operations/mutations/detach-library-stage
+  - field: detachLibraryStep
+    doc: https://developers.inaccord.com/reference/operations/mutations/detach-library-step
+  - field: detachUpdateFromLibraryResourceVersion
+    doc: https://developers.inaccord.com/reference/operations/mutations/detach-update-from-library-resource-version
+  - field: disconnectExternalDrive
+    doc: https://developers.inaccord.com/reference/operations/mutations/disconnect-external-drive
+  - field: dismissCrmContact
+    doc: https://developers.inaccord.com/reference/operations/mutations/dismiss-crm-contact
+  - field: duplicateAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/duplicate-accord
+  - field: editAccordMember
+    doc: https://developers.inaccord.com/reference/operations/mutations/edit-accord-member
+  - field: getInternalAccessLink
+    doc: https://developers.inaccord.com/reference/operations/mutations/get-internal-access-link
+  - field: importContactsAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/import-contacts-accord
+  - field: importMeetingFromGongUrl
+    doc: https://developers.inaccord.com/reference/operations/mutations/import-meeting-from-gong-url
+  - field: importMeetingFromZoomUrl
+    doc: https://developers.inaccord.com/reference/operations/mutations/import-meeting-from-zoom-url
+  - field: joinSlackChannel
+    doc: https://developers.inaccord.com/reference/operations/mutations/join-slack-channel
+  - field: jsonbRecursiveLexicalTreeStrip
+    doc: https://developers.inaccord.com/reference/operations/mutations/jsonb-recursive-lexical-tree-strip
+  - field: linkLibraryResources
+    doc: https://developers.inaccord.com/reference/operations/mutations/link-library-resources
+  - field: makeAccordMemberNonInternal
+    doc: https://developers.inaccord.com/reference/operations/mutations/make-accord-member-non-internal
+  - field: moveLibraryResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/move-library-resource
+  - field: pasteStakeholderMap
+    doc: https://developers.inaccord.com/reference/operations/mutations/paste-stakeholder-map
+  - field: presentAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/present-accord
+  - field: pushNewLibraryResourceVersion
+    doc: https://developers.inaccord.com/reference/operations/mutations/push-new-library-resource-version
+  - field: recoverAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-accord
+  - field: recoverAccordDomain
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-accord-domain
+  - field: recoverAccordHealth
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-accord-health
+  - field: recoverAccordMember
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-accord-member
+  - field: recoverAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-account
+  - field: recoverAssignedWorkspacePlaceholderRole
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-assigned-workspace-placeholder-role
+  - field: recoverComment
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-comment
+  - field: recoverConditionType
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-condition-type
+  - field: recoverConditionTypeAssociation
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-condition-type-association
+  - field: recoverCustomView
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-custom-view
+  - field: recoverEmail
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-email
+  - field: recoverExecutiveSummary
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-executive-summary
+  - field: recoverExecutiveSummarySection
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-executive-summary-section
+  - field: recoverExternalEvent
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-external-event
+  - field: recoverMeeting
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-meeting
+  - field: recoverResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-resource
+  - field: recoverSection
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-section
+  - field: recoverSectionPickListItem
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-section-pick-list-item
+  - field: recoverStage
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-stage
+  - field: recoverStep
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-step
+  - field: recoverStepResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-step-resource
+  - field: recoverSummary
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-summary
+  - field: recoverWorkspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-workspace-account
+  - field: recoverWorkspacePlaceholderRole
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-workspace-placeholder-role
+  - field: recoverWorkspacePreference
+    doc: https://developers.inaccord.com/reference/operations/mutations/recover-workspace-preference
+  - field: refreshAccordCrmData
+    doc: https://developers.inaccord.com/reference/operations/mutations/refresh-accord-crm-data
+  - field: removeFromLibraryResourceFolder
+    doc: https://developers.inaccord.com/reference/operations/mutations/remove-from-library-resource-folder
+  - field: removeMeetingFromAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/remove-meeting-from-accord
+  - field: reorderConditionTypes
+    doc: https://developers.inaccord.com/reference/operations/mutations/reorder-condition-types
+  - field: reorderSteps
+    doc: https://developers.inaccord.com/reference/operations/mutations/reorder-steps
+  - field: restoreDefaultSubscriptions
+    doc: https://developers.inaccord.com/reference/operations/mutations/restore-default-subscriptions
+  - field: revertLibraryResourceVersion
+    doc: https://developers.inaccord.com/reference/operations/mutations/revert-library-resource-version
+  - field: saveResourceToLibrary
+    doc: https://developers.inaccord.com/reference/operations/mutations/save-resource-to-library
+  - field: sendEmailShareContent
+    doc: https://developers.inaccord.com/reference/operations/mutations/send-email-share-content
+  - field: sendMagicLink
+    doc: https://developers.inaccord.com/reference/operations/mutations/send-magic-link
+  - field: setAccordConditions
+    doc: https://developers.inaccord.com/reference/operations/mutations/set-accord-conditions
+  - field: setResourceConditions
+    doc: https://developers.inaccord.com/reference/operations/mutations/set-resource-conditions
+  - field: setStageConditions
+    doc: https://developers.inaccord.com/reference/operations/mutations/set-stage-conditions
+  - field: signIn
+    doc: https://developers.inaccord.com/reference/operations/mutations/sign-in
+  - field: toggleFavoritedAt
+    doc: https://developers.inaccord.com/reference/operations/mutations/toggle-favorited-at
+  - field: trackEvent
+    doc: https://developers.inaccord.com/reference/operations/mutations/track-event
+  - field: unassignRoleAndRestorePlaceholder
+    doc: https://developers.inaccord.com/reference/operations/mutations/unassign-role-and-restore-placeholder
+  - field: updateAccessModifier
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-access-modifier
+  - field: updateAccessModifierByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-access-modifier-by-node-id
+  - field: updateAccessModifierByWorkspaceAccountIdAndName
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-access-modifier-by-workspace-account-id-and-name
+  - field: updateAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord
+  - field: updateAccordByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-by-node-id
+  - field: updateAccordCalendarEvent
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-calendar-event
+  - field: updateAccordCalendarEventByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-calendar-event-by-node-id
+  - field: updateAccordCalendarEventHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-calendar-event-history
+  - field: updateAccordCalendarEventHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-calendar-event-history-by-node-id
+  - field: updateAccordContact
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-contact
+  - field: updateAccordContactByAccordIdAndEmail
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-contact-by-accord-id-and-email
+  - field: updateAccordContactByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-contact-by-node-id
+  - field: updateAccordDomain
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-domain
+  - field: updateAccordDomainByAccordIdAndDomain
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-domain-by-accord-id-and-domain
+  - field: updateAccordDomainByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-domain-by-node-id
+  - field: updateAccordMember
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-member
+  - field: updateAccordMemberByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-accord-member-by-node-id
+  - field: updateAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-account
+  - field: updateAccountByEmail
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-account-by-email
+  - field: updateAccountByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-account-by-node-id
+  - field: updateAgentProposal
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-agent-proposal
+  - field: updateAgentProposalByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-agent-proposal-by-node-id
+  - field: updateComment
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-comment
+  - field: updateCommentByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-comment-by-node-id
+  - field: updateConditionType
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-condition-type
+  - field: updateConditionTypeAssociation
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-condition-type-association
+  - field: updateConditionTypeAssociationByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-condition-type-association-by-node-id
+  - field: updateConditionTypeByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-condition-type-by-node-id
+  - field: updateConditionTypeWithRules
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-condition-type-with-rules
+  - field: updateCrmObject
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-crm-object
+  - field: updateCrmObjectByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-crm-object-by-node-id
+  - field: updateCrmObjectSync
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-crm-object-sync
+  - field: updateCrmObjectSyncByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-crm-object-sync-by-node-id
+  - field: updateCrmObjectSyncState
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-crm-object-sync-state
+  - field: updateCrmObjectSyncStateByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-crm-object-sync-state-by-node-id
+  - field: updateCrmObjectSyncStateHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-crm-object-sync-state-history
+  - field: updateCrmObjectSyncStateHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-crm-object-sync-state-history-by-node-id
+  - field: updateCustomReaction
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-reaction
+  - field: updateCustomReactionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-reaction-by-node-id
+  - field: updateCustomView
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-view
+  - field: updateCustomViewByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-view-by-node-id
+  - field: updateCustomViewByWorkspaceAccountIdAndSourceCustomViewId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-view-by-workspace-account-id-and-source-custom-view-id
+  - field: updateCustomViewTeam
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-view-team
+  - field: updateCustomViewTeamByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-view-team-by-node-id
+  - field: updateCustomViewTeamByWorkspaceIdAndCustomViewIdAndTeamId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-view-team-by-workspace-id-and-custom-view-id-and-team-id
+  - field: updateCustomViewWorkspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-view-workspace-account
+  - field: updateCustomViewWorkspaceAccountByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-view-workspace-account-by-node-id
+  - field: updateCustomViewWorkspaceAccountByWorkspaceIdAndCustomViewIdAndWorkspaceAccountId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-view-workspace-account-by-workspace-id-and-custom-view-id-and-workspace-account-id
+  - field: updateCustomViewWorkspaceAccountHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-view-workspace-account-history
+  - field: updateCustomViewWorkspaceAccountHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-custom-view-workspace-account-history-by-node-id
+  - field: updateDealCriteriaAssociation
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criteria-association
+  - field: updateDealCriteriaAssociationByAccordIdAndDealCriteriaId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criteria-association-by-accord-id-and-deal-criteria-id
+  - field: updateDealCriteriaAssociationByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criteria-association-by-node-id
+  - field: updateDealCriteriaAssociationHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criteria-association-history
+  - field: updateDealCriteriaAssociationHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criteria-association-history-by-node-id
+  - field: updateDealCriteriaAssociationManagerScore
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criteria-association-manager-score
+  - field: updateDealCriteriaAssociationManagerScoreByDealCriteriaAssociationId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criteria-association-manager-score-by-deal-criteria-association-id
+  - field: updateDealCriteriaAssociationManagerScoreByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criteria-association-manager-score-by-node-id
+  - field: updateDealCriteriaAssociationManagerScoreHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criteria-association-manager-score-history
+  - field: updateDealCriteriaAssociationManagerScoreHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criteria-association-manager-score-history-by-node-id
+  - field: updateDealCriteriaHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criteria-history
+  - field: updateDealCriteriaHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criteria-history-by-node-id
+  - field: updateDealCriterion
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criterion
+  - field: updateDealCriterionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-criterion-by-node-id
+  - field: updateDealExecutionScoreHistory
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-execution-score-history
+  - field: updateDealExecutionScoreHistoryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-deal-execution-score-history-by-node-id
+  - field: updateDiscussion
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-discussion
+  - field: updateDiscussionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-discussion-by-node-id
+  - field: updateDiscussionWorkspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-discussion-workspace-account
+  - field: updateDiscussionWorkspaceAccountByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-discussion-workspace-account-by-node-id
+  - field: updateEmail
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-email
+  - field: updateEmailByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-email-by-node-id
+  - field: updateEventLastActivity
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-event-last-activity
+  - field: updateEventLastActivityByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-event-last-activity-by-node-id
+  - field: updateEventLastActivityByWorkspaceAccountIdAndEventAndObjectIdAndObjectType
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-event-last-activity-by-workspace-account-id-and-event-and-object-id-and-object-type
+  - field: updateExecutiveSummary
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-executive-summary
+  - field: updateExecutiveSummaryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-executive-summary-by-node-id
+  - field: updateExternalEvent
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-external-event
+  - field: updateExternalEventByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-external-event-by-node-id
+  - field: updateExternalServiceSync
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-external-service-sync
+  - field: updateExternalServiceSyncByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-external-service-sync-by-node-id
+  - field: updateExternalShare
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-external-share
+  - field: updateExternalShareByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-external-share-by-node-id
+  - field: updateHub
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-hub
+  - field: updateHubByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-hub-by-node-id
+  - field: updateHubLibraryResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-hub-library-resource
+  - field: updateHubLibraryResourceByHubIdAndLibraryResourceId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-hub-library-resource-by-hub-id-and-library-resource-id
+  - field: updateHubLibraryResourceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-hub-library-resource-by-node-id
+  - field: updateHubSpotDeal
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-hub-spot-deal
+  - field: updateLibraryResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-library-resource
+  - field: updateLibraryResourceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-library-resource-by-node-id
+  - field: updateLibraryResourceFolderContent
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-library-resource-folder-content
+  - field: updateLibraryResourceFolderContentByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-library-resource-folder-content-by-node-id
+  - field: updateLibraryResourceTag
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-library-resource-tag
+  - field: updateLibraryResourceTagByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-library-resource-tag-by-node-id
+  - field: updateLibraryResourceTagByTagIdAndLibraryResourceId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-library-resource-tag-by-tag-id-and-library-resource-id
+  - field: updateLibraryResourceVersion
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-library-resource-version
+  - field: updateMeeting
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-meeting
+  - field: updateMeetingAccord
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-meeting-accord
+  - field: updateMeetingAccordByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-meeting-accord-by-node-id
+  - field: updateMeetingAccordByWorkspaceIdAndMeetingIdAndAccordId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-meeting-accord-by-workspace-id-and-meeting-id-and-accord-id
+  - field: updateMeetingByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-meeting-by-node-id
+  - field: updateMeetingParticipant
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-meeting-participant
+  - field: updateMeetingParticipantByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-meeting-participant-by-node-id
+  - field: updateNote
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-note
+  - field: updateNoteByAccordMemberId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-note-by-accord-member-id
+  - field: updateNoteByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-note-by-node-id
+  - field: updateNotification
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-notification
+  - field: updateNotificationByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-notification-by-node-id
+  - field: updatePlaybook
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-playbook
+  - field: updatePlaybookByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-playbook-by-node-id
+  - field: updateProfile
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-profile
+  - field: updateProfileByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-profile-by-node-id
+  - field: updateResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-resource
+  - field: updateResourceBulk
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-resource-bulk
+  - field: updateResourceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-resource-by-node-id
+  - field: updateRule
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-rule
+  - field: updateRuleByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-rule-by-node-id
+  - field: updateSalesforceCustomFields
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-salesforce-custom-fields
+  - field: updateSection
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-section
+  - field: updateSectionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-section-by-node-id
+  - field: updateSectionPickListItem
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-section-pick-list-item
+  - field: updateSectionPickListItemByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-section-pick-list-item-by-node-id
+  - field: updateSeenNotifications
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-seen-notifications
+  - field: updateSlackChannelWorkspace
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-slack-channel-workspace
+  - field: updateSlackChannelWorkspaceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-slack-channel-workspace-by-node-id
+  - field: updateStage
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-stage
+  - field: updateStageByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-stage-by-node-id
+  - field: updateStep
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step
+  - field: updateStepApproval
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-approval
+  - field: updateStepApprovalByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-approval-by-node-id
+  - field: updateStepApprovalByStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-approval-by-step-id
+  - field: updateStepByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-by-node-id
+  - field: updateStepDependency
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-dependency
+  - field: updateStepDependencyByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-dependency-by-node-id
+  - field: updateStepDependencyByStepIdAndDependentStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-dependency-by-step-id-and-dependent-step-id
+  - field: updateStepInternalProcess
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-internal-process
+  - field: updateStepInternalProcessByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-internal-process-by-node-id
+  - field: updateStepInternalProcessByStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-internal-process-by-step-id
+  - field: updateStepInternalProcessByWorkspaceIdAndStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-internal-process-by-workspace-id-and-step-id
+  - field: updateStepMeeting
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-meeting
+  - field: updateStepMeetingByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-meeting-by-node-id
+  - field: updateStepMeetingByStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-meeting-by-step-id
+  - field: updateStepResource
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-resource
+  - field: updateStepResourceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-resource-by-node-id
+  - field: updateStepStakeholder
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-stakeholder
+  - field: updateStepStakeholderByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-stakeholder-by-node-id
+  - field: updateStepStakeholderByWorkspaceAccountIdAndStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-stakeholder-by-workspace-account-id-and-step-id
+  - field: updateStepToDo
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-to-do
+  - field: updateStepToDoByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-to-do-by-node-id
+  - field: updateStepToDoByStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-to-do-by-step-id
+  - field: updateStepToDoTask
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-to-do-task
+  - field: updateStepToDoTaskByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-to-do-task-by-node-id
+  - field: updateStepType
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-step-type
+  - field: updateSummary
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-summary
+  - field: updateSummaryByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-summary-by-node-id
+  - field: updateTag
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-tag
+  - field: updateTagByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-tag-by-node-id
+  - field: updateTagByWorkspaceIdAndName
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-tag-by-workspace-id-and-name
+  - field: updateTeam
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-team
+  - field: updateTeamByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-team-by-node-id
+  - field: updateTeamByWorkspaceIdAndName
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-team-by-workspace-id-and-name
+  - field: updateTeamMember
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-team-member
+  - field: updateTeamMemberByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-team-member-by-node-id
+  - field: updateTeamMemberByWorkspaceIdAndTeamIdAndWorkspaceAccountId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-team-member-by-workspace-id-and-team-id-and-workspace-account-id
+  - field: updateUserSubscription
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-user-subscription
+  - field: updateUserSubscriptionByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-user-subscription-by-node-id
+  - field: updateWorkspace
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace
+  - field: updateWorkspaceAccount
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-account
+  - field: updateWorkspaceAccountByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-account-by-node-id
+  - field: updateWorkspaceAccountByWorkspaceIdAndAccountId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-account-by-workspace-id-and-account-id
+  - field: updateWorkspaceAccountManager
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-account-manager
+  - field: updateWorkspaceAccountManagerByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-account-manager-by-node-id
+  - field: updateWorkspaceAccountManagerByWorkspaceAccountId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-account-manager-by-workspace-account-id
+  - field: updateWorkspaceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-by-node-id
+  - field: updateWorkspaceDocument
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-document
+  - field: updateWorkspaceDocumentByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-document-by-node-id
+  - field: updateWorkspacePlaceholderRole
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-placeholder-role
+  - field: updateWorkspacePlaceholderRoleByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-placeholder-role-by-node-id
+  - field: updateWorkspacePlaceholderRoleByWorkspaceIdAndInternalName
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-placeholder-role-by-workspace-id-and-internal-name
+  - field: updateWorkspacePreference
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-preference
+  - field: updateWorkspacePreferenceByNodeId
+    doc: https://developers.inaccord.com/reference/operations/mutations/update-workspace-preference-by-node-id
+  - field: upgradeSummary
+    doc: https://developers.inaccord.com/reference/operations/mutations/upgrade-summary
+  - field: uploadImage
+    doc: https://developers.inaccord.com/reference/operations/mutations/upload-image
+  - field: upsertAccessModifierById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-access-modifier-by-id
+  - field: upsertAccessModifierByWorkspaceAccountIdAndName
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-access-modifier-by-workspace-account-id-and-name
+  - field: upsertAccordCalendarEventById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-accord-calendar-event-by-id
+  - field: upsertAccordContactByAccordIdAndEmail
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-accord-contact-by-accord-id-and-email
+  - field: upsertAccordContactById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-accord-contact-by-id
+  - field: upsertAccordDomainByAccordIdAndDomain
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-accord-domain-by-accord-id-and-domain
+  - field: upsertAccordDomainById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-accord-domain-by-id
+  - field: upsertAccountByEmail
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-account-by-email
+  - field: upsertAccountById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-account-by-id
+  - field: upsertAccountProfile
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-account-profile
+  - field: upsertCommentReactionByCommentIdAndCreatedByWorkspaceAccountIdAndEmojiCode
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-comment-reaction-by-comment-id-and-created-by-workspace-account-id-and-emoji-code
+  - field: upsertCommentReactionById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-comment-reaction-by-id
+  - field: upsertCrmObject
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-crm-object
+  - field: upsertCustomViewById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-custom-view-by-id
+  - field: upsertCustomViewByWorkspaceAccountIdAndSourceCustomViewId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-custom-view-by-workspace-account-id-and-source-custom-view-id
+  - field: upsertCustomViewTeamById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-custom-view-team-by-id
+  - field: upsertCustomViewTeamByWorkspaceIdAndCustomViewIdAndTeamId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-custom-view-team-by-workspace-id-and-custom-view-id-and-team-id
+  - field: upsertCustomViewWorkspaceAccountById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-custom-view-workspace-account-by-id
+  - field: upsertCustomViewWorkspaceAccountByWorkspaceIdAndCustomViewIdAndWorkspaceAccountId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-custom-view-workspace-account-by-workspace-id-and-custom-view-id-and-workspace-account-id
+  - field: upsertDealCriteriaAssociationByAccordIdAndDealCriteriaId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-deal-criteria-association-by-accord-id-and-deal-criteria-id
+  - field: upsertDealCriteriaAssociationById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-deal-criteria-association-by-id
+  - field: upsertDealCriteriaAssociationManagerScoreByDealCriteriaAssociationId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-deal-criteria-association-manager-score-by-deal-criteria-association-id
+  - field: upsertDealCriteriaAssociationManagerScoreById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-deal-criteria-association-manager-score-by-id
+  - field: upsertEventLastActivityByWorkspaceAccountIdAndEventAndObjectIdAndObjectType
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-event-last-activity-by-workspace-account-id-and-event-and-object-id-and-object-type
+  - field: upsertHubLibraryResourceByHubIdAndLibraryResourceId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-hub-library-resource-by-hub-id-and-library-resource-id
+  - field: upsertHubLibraryResourceById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-hub-library-resource-by-id
+  - field: upsertLibraryResourceTagById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-library-resource-tag-by-id
+  - field: upsertLibraryResourceTagByTagIdAndLibraryResourceId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-library-resource-tag-by-tag-id-and-library-resource-id
+  - field: upsertNoteByAccordMemberId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-note-by-accord-member-id
+  - field: upsertNoteById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-note-by-id
+  - field: upsertProfileById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-profile-by-id
+  - field: upsertSectionById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-section-by-id
+  - field: upsertStepDependencyById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-step-dependency-by-id
+  - field: upsertStepDependencyByStepIdAndDependentStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-step-dependency-by-step-id-and-dependent-step-id
+  - field: upsertStepInternalProcessById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-step-internal-process-by-id
+  - field: upsertStepInternalProcessByStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-step-internal-process-by-step-id
+  - field: upsertStepInternalProcessByWorkspaceIdAndStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-step-internal-process-by-workspace-id-and-step-id
+  - field: upsertStepStakeholderById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-step-stakeholder-by-id
+  - field: upsertStepStakeholderByWorkspaceAccountIdAndStepId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-step-stakeholder-by-workspace-account-id-and-step-id
+  - field: upsertSummaryById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-summary-by-id
+  - field: upsertTagById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-tag-by-id
+  - field: upsertTagByWorkspaceIdAndName
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-tag-by-workspace-id-and-name
+  - field: upsertTeamById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-team-by-id
+  - field: upsertTeamByWorkspaceIdAndName
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-team-by-workspace-id-and-name
+  - field: upsertTeamMemberById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-team-member-by-id
+  - field: upsertTeamMemberByWorkspaceIdAndTeamIdAndWorkspaceAccountId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-team-member-by-workspace-id-and-team-id-and-workspace-account-id
+  - field: upsertWorkspaceAccountById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-workspace-account-by-id
+  - field: upsertWorkspaceAccountByWorkspaceIdAndAccountId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-workspace-account-by-workspace-id-and-account-id
+  - field: upsertWorkspaceAccountManagerById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-workspace-account-manager-by-id
+  - field: upsertWorkspaceAccountManagerByWorkspaceAccountId
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-workspace-account-manager-by-workspace-account-id
+  - field: upsertWorkspacePlaceholderRoleById
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-workspace-placeholder-role-by-id
+  - field: upsertWorkspacePlaceholderRoleByWorkspaceIdAndInternalName
+    doc: https://developers.inaccord.com/reference/operations/mutations/upsert-workspace-placeholder-role-by-workspace-id-and-internal-name
+subscriptions:
+  - field: generateDealAlertsStream
+    doc: https://developers.inaccord.com/reference/operations/subscriptions/generate-deal-alerts-stream
+  - field: generateSectionStream
+    doc: https://developers.inaccord.com/reference/operations/subscriptions/generate-section-stream
+  - field: listen
+    doc: https://developers.inaccord.com/reference/operations/subscriptions/listen

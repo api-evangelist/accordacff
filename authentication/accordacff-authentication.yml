@@ -1,0 +1,82 @@
+generated: '2026-09-06'
+method: searched
+source: https://developers.inaccord.com/authentication
+docs: https://developers.inaccord.com/authentication
+name: Accord authentication
+note: >-
+  Accord runs two distinct authentication models on two distinct hosts: a workspace-scoped bearer API key for the
+  GraphQL Developer API on api2.inaccord.com, and OAuth 2.1 + PKCE for the MCP server on api.inaccord.com. There is
+  no OpenAPI to derive securitySchemes from; both models are read from Accord's own published documentation, and the
+  OAuth parameters are additionally confirmed against Accord's anonymous /.well-known/ metadata.
+schemes:
+  - id: api-key-bearer
+    type: http
+    scheme: bearer
+    applies_to: https://api2.inaccord.com/graphql
+    header: Authorization
+    format: 'Authorization: Bearer YOUR_API_KEY'
+    issuance: >-
+      Created in the Accord app under Settings → Workspace → API Keys by a workspace admin only. Accord states the key
+      is shown once — "Copy immediately after creation".
+    scoping: >-
+      "A key acts within the workspace it was created in. The same Row-Level Security rules that apply to in-app
+      sessions apply to API key requests — a key cannot read or change data its workspace wouldn't otherwise be
+      able to."
+    rotation: >-
+      "To rotate a key without downtime, create the replacement first, switch your client to the new key, then delete
+      the old one." Accord exposes createApiKey / deleteApiKey mutations in the GraphQL reference.
+    expiry: not documented
+    scopes: none — the API key has no scope surface; authorization is row-level security, not scopes
+    entitlement: >-
+      Requires an Accord license that includes API access. Accord's pricing page lists "API Support" only under the
+      Enterprise tier.
+    source: https://developers.inaccord.com/authentication
+  - id: oauth2-pkce-mcp
+    type: oauth2
+    spec: OAuth 2.1 with PKCE (RFC 7636 S256)
+    applies_to: https://api.inaccord.com/1/mcp/mcp
+    issuer: https://api.inaccord.com
+    authorization_endpoint: https://api.inaccord.com/1/mcp/authorize
+    token_endpoint: https://api.inaccord.com/1/mcp/token
+    registration_endpoint: https://api.inaccord.com/1/mcp/register
+    grant_types:
+      - authorization_code
+      - refresh_token
+    token_endpoint_auth_methods:
+      - none
+    dynamic_client_registration: true
+    bearer_methods:
+      - header
+    scopes:
+      - mcp:read
+      - mcp:write
+    user_flow: >-
+      The MCP client opens the default browser to api.inaccord.com/1/mcp/authorize, the user enters their workspace
+      slug (e.g. acme for acme.inaccord.com) and completes Google SSO; the client stores the token. Accord states
+      "no API keys to manage or rotate".
+    source: https://api.inaccord.com/.well-known/oauth-authorization-server
+failure_responses:
+  - http_status: 400
+    meaning: Malformed request or missing query
+  - http_status: 401
+    meaning: Missing or invalid API key
+  - http_status: 403
+    meaning: Unauthorized API key
+  - graphql_extensions_code: '42501'
+    meaning: permission denied — the key's role lacks visibility or modification rights on the relation
+sso:
+  workspace_sso: Google SSO for the MCP authorization flow
+  enterprise_sso: >-
+    Accord's pricing page lists "Single Sign-on" as an Enterprise-tier feature. No SAML/SCIM specification is
+    published.
+x-evidence:
+  - url: https://developers.inaccord.com/authentication
+    http_status: 200
+    fetched: '2026-09-06'
+  - url: https://api.inaccord.com/.well-known/oauth-authorization-server
+    http_status: 200
+    fetched: '2026-09-06'
+  - url: https://api2.inaccord.com/graphql
+    note: anonymous introspection POST
+    http_status: 401
+    fetched: '2026-09-06'

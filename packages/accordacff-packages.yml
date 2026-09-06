@@ -1,0 +1,42 @@
+generated: '2026-09-06'
+method: searched
+source: >-
+  registry.npmjs.org search + pypi.org/pypi/<pkg>/json + https://developers.inaccord.com/ +
+  https://github.com/inaccord
+name: Accord client packages
+package_count: 0
+official_sdk_count: 0
+packages: []
+note: >-
+  Accord publishes no client SDK in any package registry that could be found, and its own documentation offers none.
+  The developer site (Authentication, Quickstarts, Filtering & conditions, Errors, API reference) shows raw GraphQL
+  documents and a curl-style Authorization header only — there is no SDK, client-library or install section anywhere
+  on it. Registry searches: registry.npmjs.org search for "inaccord" returned 0 results; a search for "accord mcp"
+  returned only unrelated publishers (jescalan/accord, @accord-protocol/*, @accordproject/* — the Accord Project
+  smart-contract foundation, a different organisation). pypi.org returned 404 for inaccord, accord-api and
+  accord-sdk. github.com/inaccord is Accord's real org but publishes only two forks (graphile/postgraphile and
+  docker-clamav-malware-scanner), neither a client library. No SDKs pointer is emitted in apis.yml.
+registries_checked:
+  - registry: npm
+    query: inaccord
+    result: 0 results
+  - registry: npm
+    query: accord mcp
+    result: no first-party package
+  - registry: pypi
+    query: inaccord
+    result: 404
+  - registry: pypi
+    query: accord-api
+    result: 404
+  - registry: pypi
+    query: accord-sdk
+    result: 404
+  - registry: github
+    query: github.com/inaccord public repositories
+    result: 2 forks, no client library
+mcp_distribution:
+  note: >-
+    Accord's MCP server is a hosted remote endpoint, not a distributed package — there is no npx/uvx install to
+    record. See mcp/accordacff-mcp.yml, deployment.mode remote.
+checked: '2026-09-06'

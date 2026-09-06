@@ -1,0 +1,28 @@
+generated: '2026-09-06'
+method: searched
+source: https://developers.inaccord.com/
+name: Accord rate limits
+limit_count: 0
+limits: []
+response_headers: []
+exhaustion_status: not documented
+note: >-
+  Accord publishes no rate limits. The developer documentation has no rate-limit page and no rate-limit section: the
+  authentication, errors, filtering-and-conditions and quickstart pages were each read in full and none names a
+  quota, a window, a burst allowance, a 429 response or any X-RateLimit-* / RateLimit-* / Retry-After header. The
+  error page's HTTP status table stops at 400/401/403/5xx with no 429 row. The closest thing to a throttling signal
+  Accord publishes is guidance to prefer "narrower filters and reasonable page sizes (first: 25–100)" on the
+  filtering page — advice, not a limit. Nothing could be observed live either: the GraphQL endpoint and the MCP
+  endpoint both reject anonymous requests (401), so no response headers are visible without a key. Recorded as an
+  honest zero.
+evidence:
+  - url: https://developers.inaccord.com/errors
+    status: 200
+    note: HTTP status table lists 400, 401, 403, 5xx — no 429
+  - url: https://developers.inaccord.com/filtering-and-conditions
+    status: 200
+    note: page-size guidance only, no enforced limit
+  - url: https://api2.inaccord.com/graphql
+    status: 401
+    note: anonymous request rejected, so no runtime headers observable
+checked: '2026-09-06'
