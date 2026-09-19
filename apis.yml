@@ -16,6 +16,9 @@ specificationVersion: '0.20'
 created: '2026-09-06'
 modified: '2026-09-06'
 position: Producing
+x-docs-platform: docusaurus
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-09-17
 tags:
   - Sales Enablement
   - Revenue Operations
