@@ -29,7 +29,7 @@ tags:
   - CRM
   - GraphQL
   - MCP
-  - agent-native
+  - Agent-Native
   - Software-as-a-Service
   - Company
 tags_raw:
@@ -99,7 +99,7 @@ apis:
     baseURL: https://api.inaccord.com/1/mcp/mcp
     tags:
       - MCP
-      - agent-native
+      - Agent-Native
       - Sales Enablement
       - Revenue Operations
     tags_raw:
