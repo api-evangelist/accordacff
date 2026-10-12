@@ -1,0 +1,70 @@
+generated: '2026-10-12'
+method: searched
+source:
+- https://zapier.com/apps/accord/integrations
+checked:
+- https://composio.dev/toolkits/accordacff
+- https://monid.ai/tools/accordacff
+- https://n8n.io/integrations/accordacff/
+- https://zapier.com/apps/accord/integrations
+- https://zapier.com/apps/accordacff/integrations
+summary: null
+marketplace_apps:
+- marketplace: zapier
+  channel: ipaas-listing
+  app: accord
+  url: https://zapier.com/apps/accord/integrations
+  external_url: https://inaccord.com/
+  partner_tier: BRONZE
+  triggers:
+  - key: new_accord
+    label: New Accord Created
+  - key: new_accord_member
+    label: New Accord Member
+  - key: new_engagement
+    label: New Engagements
+  actions:
+  - key: create_resource
+    label: Create Resource
+  - key: use_template
+    label: Create Accord From Playbook
+  searches:
+  - key: find_accord
+    label: Find Accord
+  - key: find_comment
+    label: Find Comment
+edges:
+- partner_name: ClickUp
+  partner: clickup
+  partner_match: domain
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/accord/integrations/clickup
+  direction: third-party
+  category: Project Management
+  partner_url: https://clickup.com/zapier
+- partner_name: Gmail
+  partner: gmail
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/accord/integrations/gmail
+  direction: third-party
+  category: Email
+  partner_url: https://mail.google.com/
+- partner_name: Google Calendar
+  partner: google-calendar
+  partner_match: name-exact
+  partner_candidate: null
+  type: marketplace
+  marketplace: zapier
+  channel: ipaas-usage
+  evidence: https://zapier.com/apps/accord/integrations/google-calendar
+  direction: third-party
+  category: Calendar
+  partner_url: https://calendar.google.com/
+templates: []
