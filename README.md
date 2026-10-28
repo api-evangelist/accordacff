@@ -1,4 +1,4 @@
-# Accordacff
+# Accord
 
 <!-- API-EVANGELIST-PROVENANCE:BEGIN -->
 > ### About this repository
@@ -64,27 +64,123 @@
 > Full detail: **[Where this data comes from](https://apievangelist.com/about/where-our-data-comes-from)**
 <!-- API-EVANGELIST-PROVENANCE:END -->
 
-## Accord
+Accord is a San Francisco-based revenue excellence platform for B2B sales, onboarding and customer success teams, founded in 2020 by Ross Rich and Ryan Rich. It turns a company's winning sales process into enforceable playbooks, mutual action plans and shared buyer workspaces, with stakeholder mapping, deal reviews, execution scoring and bi-directional CRM sync. Its developer surface is a single GraphQL endpoint at api2.inaccord.com/graphql covering 20+ objects (Accords, Stages, Steps, Contacts, Members, Resources, Summaries, Engagements) behind a workspace-scoped bearer API key, plus a hosted, OAuth 2.1 + PKCE Model Context Protocol server at api.inaccord.com that exposes the same read surface to MCP clients such as Claude, Cursor and ChatGPT.
 
-Accord (inaccord.com) is a San Francisco-based revenue excellence platform for B2B sales, onboarding and customer
-success teams, founded in 2020 by Ross Rich and Ryan Rich. It turns a company's winning sales process into
-enforceable playbooks, mutual action plans and shared buyer workspaces called Accords.
+**Areas:** Sales Enablement · Revenue Operations · Customer Collaboration · Sales Engagement · Customer Onboarding · Mutual Action Plans · CRM · GraphQL · MCP · Agent-Native · Software-as-a-Service · Company
 
-This repository was created from a secondary-market harvest row whose slug (`accordacff`) came from the marketplace
-listing, not from the company. The `aid` is left unchanged because it is the published page slug; the company's real
-name is Accord.
+## Accord on APIs.io
 
-**Public API surface profiled here**
+Everything profiled for Accord is published on APIs.io rather than in this repository. Start at the provider page — **[apis.io/providers/accordacff/](https://apis.io/providers/accordacff/)** — or go straight to one of the APIs or properties below.
 
-- **Accord Developer API** — one GraphQL endpoint at `https://api2.inaccord.com/graphql`, documented at
-  <https://developers.inaccord.com/>. The public reference carries 461 queries, 579 mutations and 3 subscriptions
-  over 692 object types. Bearer API key, workspace-scoped, row-level security. Beta; Enterprise tier.
-- **Accord MCP Server** — hosted remote MCP endpoint at `https://api.inaccord.com/1/mcp/mcp`, OAuth 2.1 + PKCE with
-  dynamic client registration and `mcp:read` / `mcp:write` scopes. Beta, read-only.
+### APIs (2)
 
-Accord publishes no OpenAPI, no downloadable GraphQL SDL, no SDKs, no CLI, no webhooks catalog, no status page and
-no security.txt. Its live GraphQL introspection and MCP `tools/list` are both authenticated, so the schema and the
-tool list are not readable anonymously; what is recorded here is what Accord itself publishes.
+- [Accord Developer API (GraphQL)](https://apis.io/apis/accordacff/accord-developer-api-graphql/) — A single GraphQL endpoint exposing the Accord data model — accords, stages, steps, stakeholders, playbooks, resources, summaries, engagement and CRM sync…
+- [Accord MCP Server](https://apis.io/apis/accordacff/accord-mcp-server/) — Hosted, remote Model Context Protocol server that wraps the Accord Developer API and exposes its read surface to any MCP client (Claude, Claude Code,…
 
-- Company site: <https://inaccord.com/>
-- Secondary-market listing this record was harvested from: <https://equityzen.com/company/accordacff>
+### Published properties
+
+Each property below is a page on APIs.io carrying the machine-readable artifact and what it says.
+
+#### MCP servers (1)
+
+Model Context Protocol servers that expose the API to agents.
+
+- [Accord MCP Server](https://apis.io/servers/accordacff/accord-mcp-server/)
+
+#### Security (4)
+
+Authentication, trust centre, and vulnerability disclosure.
+
+- [Accordacff Authentication](https://apis.io/security/accordacff/accordacff-authentication/)
+- [Accordacff Domain Security](https://apis.io/security/accordacff/accordacff-domain-security/)
+- [Accordacff Trust Center](https://apis.io/security/accordacff/accordacff-trust-center/)
+- [Accordacff Vulnerability Disclosure](https://apis.io/security/accordacff/accordacff-vulnerability-disclosure/)
+
+#### OAuth scopes (1)
+
+The permissions the API asks for.
+
+- [Accordacff Scopes](https://apis.io/scopes/accordacff/accordacff-scopes/)
+
+#### Plans and pricing (1)
+
+Published plans, tiers and prices.
+
+- [Accordacff Plans Pricing](https://apis.io/plans/accordacff/accordacff-plans-pricing/)
+
+#### Rate limits (1)
+
+Published request limits.
+
+- [Accordacff Rate Limits](https://apis.io/rate-limits/accordacff/accordacff-rate-limits/)
+
+## Where to find this API
+
+Links to the company's own pages. This repository publishes no copy of their specifications — the canonical document is theirs and lives at the URLs below.
+
+- [Website](https://inaccord.com/)
+- [Documentation](https://developers.inaccord.com/)
+- [Getting started](https://developers.inaccord.com/quickstarts/accords)
+- [API reference](https://developers.inaccord.com/reference)
+- [Pricing](https://inaccord.com/pricing)
+- [Sign up](https://inaccord.com/book-demo)
+- [Support](https://collaboration.inaccord.com/knowledge)
+- [Blog](https://inaccord.com/resources/blog)
+- [Terms of service](https://inaccord.com/terms-of-service)
+- [Privacy policy](https://inaccord.com/privacy-policy)
+- [GitHub](https://github.com/inaccord)
+
+## API Evangelist rating
+
+**Kin Score 43.2** — developing · rubric 0.25.0 · scored 2026-10-23
+
+| Facet | Score |
+|---|---|
+| Discoverability | 68.3 |
+| Contract quality | 0.0 |
+| Contract governance | 18.2 |
+| Operational transparency | 2.6 |
+| Developer ergonomics | 58.9 |
+| Access clarity | 92.1 |
+
+**Agent readiness 28.5** — agent-aware
+
+| Agent-readiness dimension | Result |
+|---|---|
+| Spec Presence | — |
+| Agentic Access | — |
+| Reversibility Documented | — |
+| MCP Server | documented (partial credit) |
+| Auth Clarity | served (partial credit) |
+| Idempotency | — |
+| Error Semantics | documented (partial credit) |
+| OpenAPI Examples | — |
+| Rate Limit Signal | documented (partial credit) |
+| Event Surface Described | — |
+| Agent Skills | derived (partial credit) |
+| Well Known Catalog | — |
+| Consent Identity | — |
+| Agent Card | — |
+| Dry Run Mode | — |
+| Delegated Identity | served (partial credit) |
+| Protected Resource Metadata | verified |
+| Dynamic Client Registration | yes |
+| Agentic Commerce | — |
+| Pagination Ratio | na |
+| Operation Distinctiveness | na |
+
+**Regulatory alignment 39.2** — Horizontal (data, software, accessibility, platform)
+
+The rubric is published at [github.com/api-evangelist/kin-score](https://github.com/api-evangelist/kin-score). The per-check breakdown behind these numbers — which checks were earned, partial or missed — along with score history and how this provider compares to its peers, is available at [apis.io/providers/accordacff/](https://apis.io/providers/accordacff/).
+
+## How this profile is made
+
+API Evangelist profiles a company's public API surface the way a developer would find it: the website, developer portal and documentation, the specifications it publishes, its public repositories, and its pricing, status and changelog pages. From that it derives the properties above — contracts split per API, workflows, schemas, collections, governance rules, plans and rate limits — and scores them against the published [Kin Score rubric](https://github.com/api-evangelist/kin-score).
+
+The artifacts are published on [APIs.io](https://apis.io), not in this repository. This repository is the public record for Accord: the place to say something is wrong, missing or out of date, and to ask for a re-score or a removal.
+
+## Open an issue
+
+- **Something about this listing** — a wrong description, a missing API, a stale artifact or a question about the rating: [open an issue on this repository](https://github.com/api-evangelist/accordacff/issues/new).
+- **A new API, or one that is not in the catalog yet** — [submit it on APIs.io](https://apis.io/add/).
+- **Anything else** — [the APIs.io inbox](https://github.com/api-search/inbox/issues/new) or [info@apievangelist.com](mailto:info@apievangelist.com).
